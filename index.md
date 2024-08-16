@@ -7,7 +7,7 @@
     
     <h3>Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection. </h3>
     <!-- Link to the configured traffic_control.md page -->
-    <a href="/traffic_control">Traffic Signal Control Simulator</a>
+    <a href="/traffic_signal">Traffic Signal Control Simulator</a>
     <img src="images/traffic_signal.png?raw=true" alt="Traffic Signal Control Simulator"/>
   </div>
 
