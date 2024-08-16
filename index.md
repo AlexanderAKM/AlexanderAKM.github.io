@@ -6,8 +6,8 @@
     <p>To see all of my projects, check out my <a href="https://github.com/AlexanderAKM" target="_blank">Github</a></p>
     
     <h3>Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection. </h3>
-    <!-- Link updated to point to traffic_control.md -->
-    <a href="/traffic_signal.md">Traffic Signal Control Simulator</a>
+    <!-- Link to the configured traffic_control.md page -->
+    <a href="/traffic_control">Traffic Signal Control Simulator</a>
     <img src="images/traffic_signal.png?raw=true" alt="Traffic Signal Control Simulator"/>
   </div>
 
@@ -25,6 +25,7 @@
   </div>
 
 </div>
+
 
 
 <!--

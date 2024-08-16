@@ -1,3 +1,8 @@
+---
+layout: default
+title: Traffic Signal Control Simulator
+---
+
 # Traffic Signal Control Simulator
 
 ## Overview
