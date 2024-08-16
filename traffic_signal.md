@@ -24,7 +24,7 @@ Some ideas that I am either currently working on or want to implement in the fut
 4. Experimenting with other (more diverse) environments.
 
 ## Environment
-The simulator uses the SUMO (Simulation of Urban MObility) as its underlying environment, specifically tailored for reinforcement learning applications. The SUMO-RL environment was initially created by Lucas N. Alegre. You can find the code at github here: https://github.com/LucasAlegre/sumo-rl
+The simulator uses the SUMO (Simulation of Urban MObility) as its underlying environment, specifically tailored for reinforcement learning applications. The SUMO-RL environment was initially created by Lucas N. Alegre. You can find the code at github [here](https://github.com/LucasAlegre/sumo-rl).
 
 
 

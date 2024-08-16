@@ -4,9 +4,12 @@
   <div style="padding-bottom: 20px;">
     <h2>Portfolio</h2>
     <p>To see all of my projects, check out my <a href="https://github.com/AlexanderAKM" target="_blank">Github</a></p>
+
+    <!-- Highlights Section -->
+    <h3>Highlights</h3>
     
-    <h3>Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection. </h3>
-    <!-- Link to the configured traffic_control.md page -->
+    <!-- Highlight Item -->
+    <h4>Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection.</h4>
     <a href="/traffic_signal">Traffic Signal Control Simulator</a>
     <img src="images/traffic_signal.png?raw=true" alt="Traffic Signal Control Simulator"/>
   </div>
