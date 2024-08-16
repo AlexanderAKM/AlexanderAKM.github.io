@@ -1,0 +1,13 @@
+title: Alexander Müller # your name (or website title) here
+logo: "/images/github_page.jpg?raw=true" # your photo (or logo) here
+description: > # your text below (remove <br> elements if you don't need line breaks)
+  Artificial Intelligence student at RUG
+  <br><br>
+  Teaching Assistant at RUG
+  <br><br>
+    <a href="https://www.linkedin.com/in/alexanderkmüller">View My LinkedIn Profile</a>
+  
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme
+google_analytics: UA-000000-0 # your Google Analytics tracking ID here
