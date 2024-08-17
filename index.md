@@ -16,7 +16,7 @@
     <img src="images/5x5MNIST.png?raw=true" alt="Series of MNIST Tutorials"/>
     
     <!-- Highlight Item -->
-    <a href="https://github.com/AlexanderAKM/Traffic-Signal-Control-Simulator"> target="_blank">Traffic Signal Control Simulator</a>
+    <a href="https://github.com/AlexanderAKM/Traffic-Signal-Control-Simulator" target="_blank">Traffic Signal Control Simulator</a>
     <!-- 
     <a href="/traffic_signal"> text </a> --> <p>Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection. </p>
     <img src="images/traffic_signal.png?raw=true" alt="Traffic Signal Control Simulator"/>
