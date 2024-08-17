@@ -7,9 +7,14 @@
 
     <!-- Highlights Section -->
     <h3>Highlights</h3>
+
+    <!-- Highlight Item -->
+    <p>Created a series of three tutorials tackling the MNIST dataset with PyTorch.</p>
+    <a href="/mnist_tutorials">MNIST tutorials</a>
+    <img src="images/MNIST.png?raw=true" alt="Series of MNIST Tutorials"/>
     
     <!-- Highlight Item -->
-    <h4>Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection.</h4>
+    <p>Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection.</p>
     <a href="/traffic_signal">Traffic Signal Control Simulator</a>
     <img src="images/traffic_signal.png?raw=true" alt="Traffic Signal Control Simulator"/>
   </div>
