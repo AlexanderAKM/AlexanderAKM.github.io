@@ -11,7 +11,7 @@
     <!-- Highlight Item -->
     <a href="/mnist_tutorials">MNIST tutorials</a>
     <p>Created a series of three tutorials tackling the MNIST dataset with PyTorch.</p>
-    <img src="images/MNIST.png?raw=true" alt="Series of MNIST Tutorials"/>
+    <img src="images/5x5MNIST.png?raw=true" alt="Series of MNIST Tutorials"/>
     
     <!-- Highlight Item -->
     <a href="/traffic_signal">Traffic Signal Control Simulator</a>
