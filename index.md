@@ -9,13 +9,13 @@
     <h3>Highlights</h3>
 
     <!-- Highlight Item -->
-    <a href="/mnist_tutorials">MNIST tutorials</a>
-    <p>Created a series of three tutorials tackling the MNIST dataset with PyTorch.</p>
+    <a href="https://github.com/AlexanderAKM/MNIST-tutorial" target="_blank">MNIST tutorials</a>
+    <a href="/mnist_tutorials">Created a series of three tutorials tackling the MNIST dataset with PyTorch.</a>
     <img src="images/5x5MNIST.png?raw=true" alt="Series of MNIST Tutorials"/>
     
     <!-- Highlight Item -->
-    <a href="/traffic_signal">Traffic Signal Control Simulator</a>
-    <p>Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection.</p>
+    <a href="https://github.com/AlexanderAKM/Traffic-Signal-Control-Simulator"> target="_blank">Traffic Signal Control Simulator</a>
+    <a href="/traffic_signal">Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection</a>
     <img src="images/traffic_signal.png?raw=true" alt="Traffic Signal Control Simulator"/>
   </div>
 
