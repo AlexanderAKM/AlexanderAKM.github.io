@@ -10,12 +10,15 @@
 
     <!-- Highlight Item -->
     <a href="https://github.com/AlexanderAKM/MNIST-tutorial" target="_blank">MNIST tutorials</a>
-    <a href="/mnist_tutorials">Created a series of three tutorials tackling the MNIST dataset with PyTorch.</a>
+    <!--
+    <a href="/mnist_tutorials"> text</a> -->
+    <p>Created a series of three tutorials tackling the MNIST dataset with PyTorch.</p>
     <img src="images/5x5MNIST.png?raw=true" alt="Series of MNIST Tutorials"/>
     
     <!-- Highlight Item -->
     <a href="https://github.com/AlexanderAKM/Traffic-Signal-Control-Simulator"> target="_blank">Traffic Signal Control Simulator</a>
-    <a href="/traffic_signal">Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection</a>
+    <!-- 
+    <a href="/traffic_signal"> text </a> --> <p>Implemented DQN, A2C, and a stochastic agent to control traffic for a 2-way intersection. </p>
     <img src="images/traffic_signal.png?raw=true" alt="Traffic Signal Control Simulator"/>
   </div>
 
