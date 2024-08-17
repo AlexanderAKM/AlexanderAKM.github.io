@@ -3,7 +3,7 @@
   <!-- Portfolio Section -->
   <div style="padding-bottom: 20px;">
     <h2>Portfolio</h2>
-    <p>To see all of my projects, check out my <a href="https://github.com/AlexanderAKM" target="_blank">Github</a></p>
+    <p>See my <a href="https://github.com/AlexanderAKM" target="_blank">Github</a> for an overview of all my projects and the corresponding code.</p>
 
     <!-- Highlights Section -->
     <h3>Highlights</h3>
