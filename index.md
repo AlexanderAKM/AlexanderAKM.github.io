@@ -9,7 +9,7 @@
     <h3>Highlights</h3>
 
     <!-- Highlight Item -->
-    <a href="https://github.com/AlexanderAKM/MNIST-tutorial" target="_blank">MNIST tutorials</a>
+    <h4><a href="https://github.com/AlexanderAKM/MNIST-tutorial" target="_blank">MNIST tutorials</a></h4>
     <!--
     <a href="/mnist_tutorials"> text</a> -->
     <p>Created a series of three tutorials tackling the MNIST dataset with PyTorch.</p>
