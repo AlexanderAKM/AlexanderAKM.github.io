@@ -25,7 +25,7 @@
   <!-- Email List Section -->
   <div style="padding-top: 20px;">
     <h2>Email list</h2>
-    <p>Hi there! <br> I enjoy writing short informative stories about AI and neuroscience every now and then. If you're curious and want to explore these, I'd love for you to check them out whenever you feel like it. <br>
+    <p>Hi there! <br> I enjoy writing short — sometimes informative — stories about AI and neuroscience every now and then. If you're curious and want to explore these, I'd love for you to check them out whenever you feel like it. <br>
 
     Feel free to dive in and see what they're all about :) <br>
 
