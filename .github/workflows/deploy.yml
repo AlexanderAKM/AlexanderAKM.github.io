@@ -1,7 +1,7 @@
 name: Deploy to GitHub Pages
 on:
   push:
-    branches: [main]     # or master – match your branch
+    branches: [master]     # or master – match your branch
   workflow_dispatch:
 
 permissions:
