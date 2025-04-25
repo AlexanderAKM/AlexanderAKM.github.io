@@ -1,69 +1,67 @@
-4 · Polish & interactivity
-Feature	Package / snippet
-Dark-mode toggle	npx astro add theme or custom script storing prefers-color-scheme
-Math (LaTeX)	npm i rehype-katex katex → add with remarkMath / rehypeKatex
-Syntax highlighting	npx astro add mdx then npm i rehype-prism-plus
-Comments on blog	giscus.app – lightweight GitHub Discussions widget
-Search	Client-side Fuse.js JSON index (under 5 kB) or Algolia DocSearch
-Open-Graph images	GitHub Action with Satori & Resvg to generate og.png per post
-Analytics	Simple: Plausible script; Complex: Google Analytics v4
-Contact form	<form action="https://formspree.io/f/{id}" method="POST"> — no backend
-5 · Production-grade extras
-Custom domain + HTTPS
+# Personal Website
 
-Add your domain in Settings → Pages (CNAME file auto-created)
+This is my personal portfolio website built with Astro, showcasing my projects, skills, and blog posts.
 
-Create A/AAAA or CNAME records at your registrar.
+## 🚀 Project Structure
 
-Perf & Lighthouse
+```text
+/
+├── public/              # Static assets like images and fonts
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── content/         # Content collections (blog posts, projects)
+│   ├── data/            # JSON/YAML data files
+│   ├── images/          # Images processed by Astro
+│   ├── layouts/         # Page layouts
+│   ├── pages/           # Page components (routes)
+│   └── styles/          # Global styles
+└── package.json
+```
 
-bash
-Code kopiëren
-npx @11ty/eleventy-plugin-webcpa audit https://alexanderakm.github.io
-Fix any CLS or LCP warnings.
+## 🧞 Commands
 
-CI niceties
+All commands are run from the root of the project, from a terminal:
 
-Add branch-preview workflow to deploy PRs to a random URL.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 
-Enable Dependabot for npm updates.
+## 🛠️ Technologies
 
-Accessibility
+- **Framework**: [Astro](https://astro.build/)
+- **Styling**: TailwindCSS
+- **Deployment**: GitHub Pages
+- **Content**: Markdown/MDX
 
-Run npx astro add a11y (axe-core in dev overlay).
+## 📝 Content Workflow
 
-Provide alt on every image.
+1. **Write a new blog post**:
+   ```bash
+   # Create a new post
+   cp src/content/blog/_template.md src/content/blog/yyyy-mm-dd-title.md
+   # Start local preview
+   npm run dev
+   ```
 
-SEO basics
+2. **Deploy changes**:
+   ```bash
+   git add .
+   git commit -m "Add new blog post: Title"
+   git push  # Site auto-updates via GitHub Actions
+   ```
 
-npx astro add sitemap & npx astro add rss.
+## ✨ Features
 
-<meta name="description" …> per page, canonical URLs.
-
-6 · Content pipeline (future-proof)
-When you’re ready to connect Obsidian or academic BibTeX:
-
-Use the obsidian-export CLI to dump Markdown into src/content/notes.
-
-Parse a references.bib with a tiny script to JSON and render via a Publications component.
-
-7 · Weekly workflow
-bash
-Code kopiëren
-# 1. write a post
-cd src/content/blog
-cp _template.md 2025-05-04-new-idea.md
-# 2. run local preview
-npm run dev
-# 3. commit & push
-git add .
-git commit -m "Post: New idea on vision transformers"
-git push   # site auto-updates in ~30 s
-You now have a clear path
-Define collections → 2. Build layouts & nav → 3. Migrate projects/blog posts → 4. Add polish (dark-mode, math, search) → 5. Set custom domain & analytics.
-
-Take it step by step; every push gives you a visible win.
-Ping me whenever you hit a bump or want design feedback—happy building!
+- ☀️/🌙 Dark mode toggle
+- 📱 Responsive design
+- 📊 Page analytics
+- 🔍 Search functionality
+- 💬 Contact form
+- 📝 Blog with code syntax highlighting
 
 
 

@@ -1,0 +1,66 @@
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import '../../styles/global.css';
+
+// Get all blog posts that are not drafts
+const posts = await getCollection('blog', ({ data }) => {
+  return import.meta.env.PROD ? !data.draft : true;
+});
+
+// Sort posts by date
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+});
+
+<BaseLayout
+  title="Blog | Alexander's Personal Site"
+  description="Blog posts about web development, programming, and technology."
+>
+  <section class="py-8">
+    <h1 class="text-4xl font-bold mb-8">Blog</h1>
+    
+    <div class="space-y-8">
+      {sortedPosts.map(post => (
+        <div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+          <h2 class="text-2xl font-bold mb-2">
+            <a href={`/blog/${post.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400">
+              {post.data.title}
+            </a>
+          </h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">
+            {new Date(post.data.pubDate).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+            {post.data.tags && (
+              <span class="ml-2">
+                {post.data.tags.map((tag, i) => (
+                  <span>
+                    <span class="inline-block bg-slate-200 dark:bg-slate-700 rounded-full px-2 py-1 text-xs">
+                      {tag}
+                    </span>{i < post.data.tags.length - 1 ? ' ' : ''}
+                  </span>
+                ))}
+              </span>
+            )}
+          </p>
+          <a href={`/blog/${post.slug}`} class="text-blue-600 hover:underline">Read more →</a>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<footer class="bg-slate-100 dark:bg-slate-800 py-8 mt-12">
+  <div class="max-w-4xl mx-auto px-4 md:px-8">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <p class="mb-4 md:mb-0">© 2023 Alexander. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://github.com/AlexanderAKM" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400">GitHub</a>
+        <a href="https://linkedin.com" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400">LinkedIn</a>
+        <a href="https://twitter.com" class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400">Twitter</a>
+      </div>
+    </div>
+  </div>
+</footer> 
