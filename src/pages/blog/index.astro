@@ -1,53 +1,29 @@
--m import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import '../../styles/global.css';
 
-// Get all blog posts that are not drafts
-const posts = await getCollection('blog', ({ data }) => {
-  return import.meta.env.PROD ? !data.draft : true;
-});
-
-// Sort posts by date
-const sortedPosts = posts.sort((a, b) => {
-  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
-});
+const posts = await getCollection('blog');
+---
 
 <BaseLayout
   title="Blog | Alexander's Personal Site"
-  description="Blog posts about web development, programming, and technology."
+  description="Blog posts and articles"
 >
-  <section class="py-8">
+  <div class="py-8">
     <h1 class="text-4xl font-bold mb-8">Blog</h1>
     
-    <div class="space-y-8">
-      {sortedPosts.map(post => (
-        <div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+    <div class="space-y-6">
+      {posts.map((post) => (
+        <div class="border dark:border-slate-700 rounded-lg p-6">
           <h2 class="text-2xl font-bold mb-2">
-            <a href={`/blog/${post.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400">
-              {post.data.title}
-            </a>
+            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
           </h2>
-          <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">
-            {new Date(post.data.pubDate).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}
-            {post.data.tags && (
-              <span class="ml-2">
-                {post.data.tags.map((tag, i) => (
-                  <span>
-                    <span class="inline-block bg-slate-200 dark:bg-slate-700 rounded-full px-2 py-1 text-xs">
-                      {tag}
-                    </span>{i < post.data.tags.length - 1 ? ' ' : ''}
-                  </span>
-                ))}
-              </span>
-            )}
+          <p class="text-slate-500 mb-2">
+            {new Date(post.data.pubDate).toLocaleDateString()}
           </p>
-          <a href={`/blog/${post.slug}`} class="text-blue-600 hover:underline">Read more →</a>
+          <a href={`/blog/${post.slug}`} class="text-blue-600">Read more</a>
         </div>
       ))}
     </div>
-  </section>
+  </div>
 </BaseLayout> 
