@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "convert:obsidian": "node scripts/obsidian-to-astro.js",
+    "setup:converter": "npm install gray-matter fs-extra"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.0.0",
@@ -14,10 +16,12 @@
     "@astrojs/sitemap": "^3.0.6",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.8.5",
+    "gray-matter": "^4.0.3",
     "rehype-external-links": "^3.0.0",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.10"
+    "@tailwindcss/typography": "^0.5.10",
+    "fs-extra": "^11.3.0"
   }
 }

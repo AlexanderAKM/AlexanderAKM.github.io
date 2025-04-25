@@ -3,78 +3,111 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Contact | Alexander's Personal Site"
-  description="Get in touch with me for collaboration, job opportunities, or just to say hello."
+  title="Contact | Alexander Müller"
+  description="Get in touch with me for AI alignment research, collaboration, or just to say hello."
 >
   <section class="py-8">
     <h1 class="text-4xl font-bold mb-8">Contact Me</h1>
     
-    <div class="max-w-2xl">
+    <div class="max-w-3xl">
       <p class="mb-8 text-lg">
-        Have a question or want to work together? Fill out the form below or reach out through social media.
+        Have a question about AI safety research or want to work together? Fill out the form below or reach out through email or social media.
       </p>
       
-      <form 
-        action="https://formspree.io/f/your-form-id" 
-        method="POST" 
-        class="space-y-6"
-      >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
         <div>
-          <label for="name" class="block text-sm font-medium mb-1">Name</label>
-          <input 
-            type="text" 
-            id="name" 
-            name="name" 
-            required
-            class="w-full px-4 py-2 border dark:border-slate-700 rounded-md bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
+          <h2 class="text-2xl font-bold mb-6">Send me a message</h2>
+          <!-- 
+            To set up email forwarding:
+            1. Create an account at formspree.io
+            2. Create a new form and get your form ID
+            3. Replace "your-form-id" below with your actual form ID
+            4. You'll receive emails when someone submits this form
+          -->
+          <form 
+            action="https://formspree.io/f/xovdvjgz" 
+            method="POST" 
+            class="space-y-6"
+          >
+            <div>
+              <label for="name" class="block text-sm font-medium mb-1">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required
+                class="w-full px-4 py-2 border dark:border-slate-700 rounded-md bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium mb-1">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full px-4 py-2 border dark:border-slate-700 rounded-md bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium mb-1">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required
+                class="w-full px-4 py-2 border dark:border-slate-700 rounded-md bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+            </div>
+            
+            <input type="hidden" name="_subject" value="New message from your website" />
+            <input type="hidden" name="_replyto" value="%email%" />
+            
+            <button 
+              type="submit"
+              class="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
         
         <div>
-          <label for="email" class="block text-sm font-medium mb-1">Email</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            required
-            class="w-full px-4 py-2 border dark:border-slate-700 rounded-md bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-        
-        <div>
-          <label for="message" class="block text-sm font-medium mb-1">Message</label>
-          <textarea 
-            id="message" 
-            name="message" 
-            rows="5" 
-            required
-            class="w-full px-4 py-2 border dark:border-slate-700 rounded-md bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          ></textarea>
-        </div>
-        
-        <button 
-          type="submit"
-          class="px-5 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
-        >
-          Send Message
-        </button>
-      </form>
-      
-      <div class="mt-12 pt-8 border-t dark:border-slate-700">
-        <h2 class="text-2xl font-bold mb-4">Connect With Me</h2>
-        <div class="space-y-2">
-          <p>
-            <strong>GitHub:</strong> 
-            <a href="https://github.com/AlexanderAKM" class="text-blue-600 hover:underline">AlexanderAKM</a>
-          </p>
-          <p>
-            <strong>LinkedIn:</strong> 
-            <a href="#" class="text-blue-600 hover:underline">Alexander</a>
-          </p>
-          <p>
-            <strong>Email:</strong> 
-            <a href="mailto:your-email@example.com" class="text-blue-600 hover:underline">your-email@example.com</a>
-          </p>
+          <h2 class="text-2xl font-bold mb-6">Direct Contact</h2>
+          <div class="space-y-4 mb-8">
+            <p>
+              <strong>Personal Email:</strong><br />
+              <a href="mailto:alexanderklavermuller@gmail.com" class="text-blue-600 hover:underline">alexanderklavermuller@gmail.com</a>
+            </p>
+            <p>
+              <strong>Research/Business Email:</strong><br />
+              <a href="mailto:alexander@aisig.org" class="text-blue-600 hover:underline">alexander@aisig.org</a>
+            </p>
+            <p>
+              <strong>LinkedIn:</strong><br />
+              <a href="https://www.linkedin.com/in/alexanderkmüller" target="_blank" class="text-blue-600 hover:underline">www.linkedin.com/in/alexanderkmüller</a>
+            </p>
+            <p>
+              <strong>GitHub:</strong><br />
+              <a href="https://github.com/AlexanderAKM" target="_blank" class="text-blue-600 hover:underline">AlexanderAKM</a>
+            </p>
+          </div>
+          
+          <div class="mt-10 pt-6 border-t dark:border-slate-700">
+            <h3 class="text-xl font-bold mb-4">Anonymous Feedback</h3>
+            <p class="mb-4">
+              I value honest feedback! If you have suggestions, criticism, or compliments you'd like to share anonymously:
+            </p>
+            <a 
+              href="https://forms.gle/3vGYE7xHff92r9JR7" 
+              target="_blank"
+              class="inline-block px-5 py-3 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors"
+            >
+              Send Anonymous Feedback
+            </a>
+          </div>
         </div>
       </div>
     </div>

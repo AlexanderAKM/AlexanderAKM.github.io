@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import linkedinPhoto from '../images/Linkedin_foto.jpg';
 
 // Get all blog posts that are not drafts
 const posts = await getCollection('blog', ({ data }) => {
@@ -14,61 +16,82 @@ const latestPosts = posts
 ---
 
 <BaseLayout 
-	title="Alexander's Personal Site" 
-	description="Personal website and portfolio showcasing my projects, skills, and blog posts."
+	title="Alexander Müller | AI Alignment Researcher" 
+	description="Personal website of Alexander Müller, an AI Alignment researcher focusing on mechanistic interpretability and representation engineering."
 >
 	<section class="py-12 md:py-20">
-		<h1 class="text-4xl md:text-6xl font-bold mb-6">Hello, I'm Alexander</h1>
-		<p class="text-xl mb-8 max-w-2xl">I'm a software developer specializing in web technologies and passionate about creating user-friendly experiences.</p>
-		<div class="flex gap-4">
-			<a href="/projects" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md">See my work</a>
-			<a href="/contact" class="px-5 py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-md">Get in touch</a>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+			<div class="md:col-span-2">
+				<h1 class="text-4xl md:text-6xl font-bold mb-6">Alexander Müller</h1>
+				<p class="text-xl mb-8 max-w-2xl leading-relaxed">I'm an AI Alignment researcher studying at the University of Groningen, focusing on mechanistic interpretability and ensuring AI systems remain safe and aligned with human values.</p>
+				<div class="flex gap-4 flex-wrap">
+					<a href="/about" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md">About me</a>
+					<a href="/CV_Alexander_Müller.pdf" target="_blank" class="px-5 py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-md">View CV</a>
+					<a href="/contact" class="px-5 py-2 border border-slate-400 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md">Get in touch</a>
+				</div>
+			</div>
+			<div class="mt-8 md:mt-0">
+				<Image 
+					src={linkedinPhoto} 
+					alt="Alexander Müller" 
+					class="w-full max-w-xs mx-auto rounded-lg shadow-md"
+				/>
+			</div>
 		</div>
 	</section>
 
 	<section class="py-12">
-		<h2 class="text-2xl md:text-3xl font-bold mb-6">Featured Projects</h2>
+		<h2 class="text-2xl md:text-3xl font-bold mb-6">Research Interests</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<!-- Project cards will go here -->
 			<div class="border dark:border-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-				<div class="h-48 bg-slate-200 dark:bg-slate-800"></div>
-				<div class="p-4">
-					<h3 class="text-xl font-bold mb-2">Project One</h3>
-					<p class="text-slate-600 dark:text-slate-400 mb-4">A brief description of this amazing project and what technologies were used.</p>
-					<a href="/projects/project-one" class="text-blue-600 hover:underline">View details →</a>
+				<div class="p-6">
+					<h3 class="text-xl font-bold mb-2">Mechanistic Interpretability</h3>
+					<p class="text-slate-600 dark:text-slate-400 mb-4">Understanding how neural networks work internally is crucial for ensuring control and alignment of increasingly powerful AI systems.</p>
 				</div>
 			</div>
 			<div class="border dark:border-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-				<div class="h-48 bg-slate-200 dark:bg-slate-800"></div>
-				<div class="p-4">
-					<h3 class="text-xl font-bold mb-2">Project Two</h3>
-					<p class="text-slate-600 dark:text-slate-400 mb-4">A brief description of this amazing project and what technologies were used.</p>
-					<a href="/projects/project-two" class="text-blue-600 hover:underline">View details →</a>
+				<div class="p-6">
+					<h3 class="text-xl font-bold mb-2">Computational Neuroscience</h3>
+					<p class="text-slate-600 dark:text-slate-400 mb-4">Exploring how insights from neuroscience can inform safer and more interpretable AI systems through understanding both biological and artificial neural networks.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<section class="py-12">
-		<h2 class="text-2xl md:text-3xl font-bold mb-6">Latest Blog Posts</h2>
-		<div class="space-y-6">
-			{latestPosts.map(post => (
-				<div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
-					<h3 class="text-xl font-bold mb-2">
-						<a href={`/blog/${post.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400">
-							{post.data.title}
-						</a>
-					</h3>
-					<p class="text-sm text-slate-500 dark:text-slate-400 mb-3">
-						{new Date(post.data.pubDate).toLocaleDateString('en-US', {
-							year: 'numeric',
-							month: 'long',
-							day: 'numeric'
-						})}
-					</p>
-					<a href={`/blog/${post.slug}`} class="text-blue-600 hover:underline">Read more →</a>
-				</div>
-			))}
+		<h2 class="text-2xl md:text-3xl font-bold mb-6">Involvement</h2>
+		<div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow mb-6">
+			<h3 class="text-xl font-bold mb-2">Neuralignment</h3>
+			<p class="text-slate-600 dark:text-slate-400 mb-4">
+				I lead the Neuralignment research & discussion group at the AI Initiative Groningen, where we explore new research avenues in AI safety and alignment.
+			</p>
 		</div>
 	</section>
+
+	{latestPosts.length > 0 && (
+		<section class="py-12">
+			<h2 class="text-2xl md:text-3xl font-bold mb-6">Latest Blog Posts</h2>
+			<div class="space-y-6">
+				{latestPosts.map(post => (
+					<div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+						<h3 class="text-xl font-bold mb-2">
+							<a href={`/blog/${post.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400">
+								{post.data.title}
+							</a>
+						</h3>
+						<p class="text-sm text-slate-500 dark:text-slate-400 mb-3">
+							{new Date(post.data.pubDate).toLocaleDateString('en-US', {
+								year: 'numeric',
+								month: 'long',
+								day: 'numeric'
+							})}
+						</p>
+						<a href={`/blog/${post.slug}`} class="text-blue-600 hover:underline">Read more →</a>
+					</div>
+				))}
+			</div>
+		</section>
+	)}
 </BaseLayout>
+
+
