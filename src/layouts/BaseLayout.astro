@@ -1,0 +1,33 @@
+<!-- src/layouts/BaseLayout.astro -->
+---
+const { title = 'Alexander Müller' } = Astro.props;
+---
+<html class="h-full" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body class="min-h-full flex flex-col">
+    <header class="border-b">
+      <nav class="max-w-4xl mx-auto flex gap-6 py-4">
+        <a href="/" class="font-bold">AM</a>
+        <a href="/projects">Projects</a>
+        <a href="/blog">Blog</a>
+        <a href="/publications">Papers</a>
+        <a href="/cv.pdf" target="_blank">CV</a>
+      </nav>
+    </header>
+
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-8">
+      <slot />
+    </main>
+
+    <footer class="text-sm text-center py-6 opacity-70">
+      © {new Date().getFullYear()} Alexander Müller
+    </footer>
+  </body>
+</html>
+
+# Add pages like src/pages/projects/index.astro that query the projects/ collection and render cards.
