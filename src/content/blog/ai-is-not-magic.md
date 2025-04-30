@@ -17,7 +17,7 @@ The term "Artificial Intelligence" was coined in 1955 at Dartmouth College [1], 
 
 Although McCarthy and his colleagues may have slightly overestimated themselves, AI was born. For a long time, development was made in so-called "Rule-based" or "Symbolic" AI, which tried to establish all of the rules that humans were dictated by. If we can find these rules, we implement them into a computer, and we're done... right?
 
-Unfortunately, progress went quite slow. Conceptually, this idea sounds nice, but it became apparent that finding rules is tedious, and there is always something that you did not expect. This is known as the **Frame problem**, and a concept that still significantly limits these traditional AI systems.
+Unfortunately, progress went quite slow. Conceptually, this idea sounds nice, but it became apparent that finding rules is tedious, and there is always something that you did not expect. This is known as the **Frame problem**, a concept that still significantly limits these traditional AI systems.
 
 When it is not possible to give an AI system *all* of the possible rules in *all* situations, we must give it the ability to **learn**. This is the foundation of everything we see and hear about in the news, and has only recently (last 1/2 decades) become realizable through massive advancements in data availability and computing power. 
 
@@ -27,7 +27,7 @@ This might seem like magic - we can make a machine 'learn', and we get something
 
 To be honest, it is quite magical, and even the people behind systems like ChatGPT don't really understand how it works (yes, really, that **is** scary and **should** be scary and I'll be writing about that much more as well!). However, conceptually it is quite simple. The most intuitive form of ML is called **supervised learning** and is often used in computer vision (what your phone uses when you're able to open it with your face). 
 
-The system only needs three things: data, a learning algorithm, and a learning **objective**. Let's say our learning objective is to distinguish between dogs and cats.
+The system only needs three things: data, a learning algorithm, and a learning objective. Let's say our learning objective is to distinguish between dogs and cats.
 
 1) Firstly, it has no clue. This is much like a newborn baby who just cries and sleeps... When the model sees an image of a cat, it simply chooses based on its gut feeling (see here for an explanation which covers the math as this 'gut feeling' is slightly more complicated [2]). In our case, fifty/fifty that it's correct.
 2) We let the system do this a number of times. Then, we calculate how *wrong* the system was, and the learning algorithm updates the system's 'gut feeling' (some numbers represented mathematically) in the **opposite direction** of the 'wrongness'. This sounds abstract, but the math behind this is very elegant and it works beautifully! ([3] for an amazing video by 3Blue1Brown explaining the process behind it and [4] for a more mathy explanation.)
