@@ -13,7 +13,7 @@ Funnily enough, because AI has been flooding the news everyday for more than a y
 
 Explaining the field of AI can be done simply by looking at its name - to (artificially) create intelligence. Understandably, this might still seem very vague, so let me try to give a rough overview of what I do on a daily basis.
 
-The term "Artificial Intelligence" was coined in 1955 at Dartmouth College [1], where John McCarthy, Marvin Minsky, Nathaniel Rochester and Claude Shannon came together and decided enough was enough. A 2-month, 10-man study of artificial intelligence would be carried out to make a significant advancement in any aspect of learning or other feature of intelligence. Roughly 70 years later, and we still are far removed from any kind of general intelligence AI...
+The term "Artificial Intelligence" was coined in 1955 at Dartmouth College [1], where John McCarthy, Marvin Minsky, Nathaniel Rochester and Claude Shannon came together and decided enough was enough. A 2-month, 10-man study of artificial intelligence would be carried out to make a significant advancement in any aspect of learning or other feature of intelligence. It's safe to say this didn't quite go to plan...
 
 Although McCarthy and his colleagues may have slightly overestimated themselves, AI was born. For a long time, development was made in so-called "Rule-based" or "Symbolic" AI, which tried to establish all of the rules that humans were dictated by. If we can find these rules, we implement them into a computer, and we're done... right?
 
