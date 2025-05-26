@@ -1,7 +1,7 @@
 ---
-title: "AI is (not) magic"
+title: "AI is (not) Magic"
 pubDate: 2024-04-25T21:55:31Z
-tags: ["AI", "Machine Learning", "Education"]
+#tags: ["AI", "Machine Learning", "Education"]
 draft: false
 ---
 

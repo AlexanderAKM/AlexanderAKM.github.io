@@ -1,7 +1,7 @@
 ---
-title: "Reflection on first (probable) publication"
+title: "Reflection on First (Probable) Publication"
 pubDate: 2025-05-24T18:49:00Z
-tags: ["AI", "Activation Engineering", "Machine Learning", "Research"]
+#tags: ["AI", "Activation Engineering", "Machine Learning", "Research"]
 draft: false
 ---
 
