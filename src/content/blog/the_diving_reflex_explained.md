@@ -1,7 +1,6 @@
 ---
 title: "The Diving Reflex Explained"
 pubDate: 2024-10-21T21:55:31Z
-#tags: ["Research"]
 draft: false
 ---
 
