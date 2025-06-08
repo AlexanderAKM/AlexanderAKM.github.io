@@ -9,10 +9,12 @@ This article is heavily inspired by [How to Beat Procrastination — LessWrong](
 Let me start off by giving a little context, and what it is I'm interested in. I often think about three overlapping phenomena: motivation, akrasia, and procrastination. Here I'll define motivation as a state of lacking the desire or drive to act, akrasia as acting against your better judgment, and procrastination as the act of delaying or postponing tasks (usually irrationally). Although these  phenomena are distinct enough to deserve their own word (and separate article), I believe for this piece of writing it will suffice to disregard akrasia (and let one swap out lack of motivation with akrasia). 
 
 Evidence suggests procrastination seems like a lack of motivation, and can roughly be encapsulated with the following equation:
+
 $$\Large \text{Motivation}=\frac{\text{Expectancy} \times \text{Value}}{\text{Impulsiveness} \times \text{Delay}}$$
+
 Keep in mind that this equation is only an attempt to concretize the abstract notion of motivation. It is, perhaps unfortunately, not yet the case that we can measure a halving of, for example, impulsiveness, and subsequently experience a doubling of motivation. Small intermezzo of elementary algebra: To increase motivation, we need to increase the numerator (things above the line) and decrease the denominator (things below the line). 
 
-Let's start with the *expectancy* of success of the task one might procrastinate on. Two main techniques seem to reliably work for increasing your optimism for success.
+Let's start with the **expectancy** of success of the task one might procrastinate on. Two main techniques seem to reliably work for increasing your optimism for success.
 
 Firstly, make use of **success spirals**. Effectively, when we achieve something, we gain confidence, and we want to keep going. Thus, we can design a series of meaningful, challenging but achievable goals, and then achieve them. To give a concrete example, let's say you want to run a half-marathon in 3 months. Previously, you have struggled to stay consistent with running. Thus, your expectancy of success of you consistently training for 3 months and finishing the half-marathon is low. To combat this, you (or ChatGPT) can make many increasingly difficult, intermediate subgoals to get you **used to winning**. These will be very personal! For some their first subgoal might be running 10 km, and for someone else it might be jogging 1 km. As long as you spiral into a state of success. Once you start succeeding, it becomes a habit. Once something is a habit, it becomes extremely difficult to get rid of it. 
 
