@@ -1,16 +1,16 @@
-// Obsidian to Astro Blog Post Converter
+// Obsidian to Astro Writing Post Converter
 const fs = require('fs-extra');
 const path = require('path');
 const matter = require('gray-matter');
 
 // Configuration
 const OBSIDIAN_VAULT_PATH = 'C:/Path/To/Your/Obsidian/Vault'; // Update this path
-const BLOG_OUTPUT_PATH = path.join(__dirname, '../src/content/blog');
+const WRITING_OUTPUT_PATH = path.join(__dirname, '../src/content/writing');
 const IMAGE_OUTPUT_PATH = path.join(__dirname, '../public/images');
 const ATTACHMENTS_FOLDER = 'Attachments'; // Obsidian attachments folder name (change if needed)
 
 // Ensure directories exist
-fs.ensureDirSync(BLOG_OUTPUT_PATH);
+fs.ensureDirSync(WRITING_OUTPUT_PATH);
 fs.ensureDirSync(IMAGE_OUTPUT_PATH);
 
 /**
@@ -75,7 +75,7 @@ function processObsidianFile(filePath) {
       (match, pageName, _, altText) => {
         const linkText = altText || pageName;
         const slug = pageName.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
-        return `[${linkText}](/blog/${slug})`;
+        return `[${linkText}](/writing/${slug})`;
       }
     );
     
@@ -97,7 +97,7 @@ function processObsidianFile(filePath) {
       .toLowerCase()
       .replace(/\s+/g, '-')
       .replace(/[^\w-]/g, '');
-    const outputPath = path.join(BLOG_OUTPUT_PATH, `${slug}.md`);
+    const outputPath = path.join(WRITING_OUTPUT_PATH, `${slug}.md`);
     
     // Write the new file with frontmatter
     const outputContent = matter.stringify(transformedContent, frontmatter);

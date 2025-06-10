@@ -1,25 +1,37 @@
 ---
-title: "Blog Post Title"
-pubDate: 2023-01-01
-tags: ["tag1", "tag2"]
+title: "Writing Post Title"
+pubDate: 2024-01-01
+tags: ["Category"]
 draft: false
 ---
 
-## Introduction
-
-Write an engaging introduction to your blog post here...
+Write an engaging introduction to your writing post here...
 
 ## Main Content
 
-This is the main content of your blog post. You can use markdown formatting:
+This is the main content of your writing post. You can use markdown formatting:
 
-- Bullet points
-- Lists
-- Etc.
+- **Bold text** for emphasis
+- *Italic text* for subtle emphasis
+- `Code snippets` for technical content
+- [Links](https://example.com) to external resources
 
-### Subheading
+## Citations
 
-More content under a subheading...
+You can use BibTeX citations in your writing. For example:
+
+This is a reference to a paper \cite{example-citation}.
+
+@article{example-citation,
+  author = {Author, A. and Author, B.},
+  title = {Example Paper Title},
+  journal = {Journal Name},
+  volume = {1},
+  number = {1},
+  pages = {1--10},
+  year = {2024},
+  doi = {10.1234/example.2024.1}
+}
 
 ```js
 // Code example

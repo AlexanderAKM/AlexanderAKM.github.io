@@ -10,7 +10,7 @@ This is my personal portfolio website built with Astro, showcasing my projects, 
 ├── public/              # Static assets like images and fonts
 ├── src/
 │   ├── components/      # Reusable UI components
-│   ├── content/         # Content collections (blog posts, projects)
+│   ├── content/         # Content collections (writing posts, projects)
 │   ├── data/            # JSON/YAML data files
 │   ├── images/          # Images processed by Astro
 │   ├── layouts/         # Page layouts
@@ -40,10 +40,10 @@ All commands are run from the root of the project, from a terminal:
 
 ## 📝 Content Workflow
 
-1. **Write a new blog post**:
+1. **Write a new writing post**:
    ```bash
    # Create a new post
-   cp src/content/blog/_template.md src/content/blog/yyyy-mm-dd-title.md
+   cp src/content/writing/_template.md src/content/writing/yyyy-mm-dd-title.md
    # Start local preview
    npm run dev
    ```
@@ -51,7 +51,7 @@ All commands are run from the root of the project, from a terminal:
 2. **Deploy changes**:
    ```bash
    git add .
-   git commit -m "Add new blog post: Title"
+   git commit -m "Add new writing post: Title"
    git push  # Site auto-updates via GitHub Actions
    ```
 
@@ -62,7 +62,7 @@ All commands are run from the root of the project, from a terminal:
 - 📊 Page analytics
 - 🔍 Search functionality
 - 💬 Contact form
-- 📝 Blog with code syntax highlighting
+- 📝 Writing with code syntax highlighting
 
 
 

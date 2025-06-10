@@ -1,6 +1,15 @@
-# Importing Obsidian Blog Posts to Your Astro Website
+# Importing Obsidian Writing Posts to Your Astro Website
 
-This guide explains how to import your Obsidian Markdown notes as blog posts on your Astro website.
+This guide explains how to import your Obsidian Markdown notes as writing posts on your Astro website.
+
+## Overview
+
+The script `scripts/obsidian-to-astro.js` converts your Obsidian markdown files to Astro-compatible markdown files with proper frontmatter. It handles:
+
+- Converting Obsidian frontmatter to Astro frontmatter
+- Processing internal links
+- Copying and processing images
+- Converting callouts to HTML
 
 ## Setup
 
@@ -9,77 +18,81 @@ This guide explains how to import your Obsidian Markdown notes as blog posts on 
    npm run setup:converter
    ```
 
-2. **Configure the converter**:
-   Open `scripts/obsidian-to-astro.js` and update the `OBSIDIAN_VAULT_PATH` variable to point to your Obsidian vault location.
-   
-   ```javascript
-   const OBSIDIAN_VAULT_PATH = 'C:/Path/To/Your/Obsidian/Vault'; // Update this path
-   ```
-   
-   If your Obsidian attachments folder has a different name, update the `ATTACHMENTS_FOLDER` variable:
-   
-   ```javascript
-   const ATTACHMENTS_FOLDER = 'Attachments'; // Obsidian attachments folder name (change if needed)
-   ```
+2. **Update the script configuration**:
+   Open `scripts/obsidian-to-astro.js` and update the `OBSIDIAN_VAULT_PATH` to point to your Obsidian vault.
 
 ## Usage
 
-### Convert Specific Files
-
-To convert specific Obsidian markdown files:
+Run the converter with:
 
 ```bash
-npm run convert:obsidian -- path/to/your/note.md path/to/another/note.md
+npm run convert:obsidian -- --folder "path/to/your/obsidian/vault"
 ```
 
-### Convert All Files in a Folder
-
-To convert all markdown files in a specific folder:
-
-```bash
-npm run convert:obsidian -- --folder path/to/folder
-```
-
-### Convert All Files in the Vault
-
-To convert all markdown files in your Obsidian vault:
-
-```bash
-npm run convert:obsidian -- --all
-```
-
-## What the Converter Does
-
-The converter automates the following tasks:
-
-1. **Adds required frontmatter** for Astro (title, pubDate, tags, draft)
-2. **Converts Obsidian syntax** to standard Markdown:
-   - Obsidian image links `![[image.jpg]]` → `![](/images/image.jpg)`
-   - Obsidian internal links `[[Page Name]]` → `[Page Name](/blog/page-name)`
-   - Obsidian callouts/admonitions to HTML divs
-3. **Copies images** from your Obsidian vault to the website's public images folder
-
-## Manual Adjustments You Might Need
-
-After conversion, you might still need to check for:
-
-1. **Additional Obsidian-specific syntax** that wasn't handled by the converter
-2. **Broken links** to non-existent blog posts
-3. **Image formatting** issues
-4. **Complex embeds** or custom Obsidian plugin content
-
-## Troubleshooting
-
-- **Missing images**: Make sure your images are in the main vault folder or in the Attachments folder
-- **Conversion errors**: Check the terminal output for error messages
-- **Formatting issues**: You might need to manually adjust some complex formatting
-
-## Adding a Custom Script to package.json
-
-If you want to add a specific shortcut for a commonly used folder, you can add a custom script to your package.json:
+Or add a custom script to your `package.json`:
 
 ```json
 "scripts": {
-  "convert:blog": "node scripts/obsidian-to-astro.js --folder C:/Path/To/Obsidian/Vault/Blog"
+  "convert:writing": "node scripts/obsidian-to-astro.js --folder C:/Path/To/Obsidian/Vault/Writing"
 }
-``` 
+```
+
+## Conversion Process
+
+The script performs the following conversions:
+
+1. **Frontmatter**:
+   ```yaml
+   ---
+   title: "Your Post Title"
+   pubDate: 2024-01-01
+   tags: ["Category"]
+   draft: false
+   ---
+   ```
+
+2. **Internal Links**:
+   - Obsidian internal links `[[Page Name]]` → `[Page Name](/writing/page-name)`
+
+3. **Images**:
+   - Obsidian image syntax `![[image.jpg]]` → `![Alt text](/images/image.jpg)`
+   - Images are copied to `public/images/`
+
+4. **Callouts**:
+   - Obsidian callouts are converted to HTML with appropriate styling
+
+## Troubleshooting
+
+Common issues:
+
+1. **Missing images** - Ensure your Obsidian vault has an Attachments folder
+2. **Broken links** to non-existent writing posts
+3. **Frontmatter issues** - Check that your Obsidian frontmatter is properly formatted
+
+## Manual Process
+
+If the automated process doesn't work for your needs, you can manually convert your Obsidian notes:
+
+1. Copy the content from your Obsidian note
+2. Create a new file in `src/content/writing/your-post-title.md`
+3. Add the required frontmatter
+4. Fix internal links and image references
+5. Convert callouts to HTML
+
+## Tips
+
+- Use consistent naming conventions in your Obsidian vault
+- Keep your writing posts organized in a dedicated folder
+- Use tags to categorize your posts
+- Test your converted posts locally before publishing
+
+## Preview
+
+To preview your site with the converted writing posts:
+
+1. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+2. Visit `http://localhost:4321/writing` to see your writing posts. 

@@ -1,67 +1,69 @@
-# Adding Blog Posts from Obsidian
+# Adding Writing Posts from Obsidian
 
-This guide explains the simple manual process to add your Obsidian markdown files as blog posts.
+This guide explains the simple manual process to add your Obsidian markdown files as writing posts.
 
-## Simple Manual Process
+## Manual Process
 
-1. **Copy your Obsidian content** and paste it into a new file in `src/content/blog/your-post-title.md`
+1. **Copy your Obsidian content** and paste it into a new file in `src/content/writing/your-post-title.md`
 
-2. **Add the required frontmatter** at the top of the file:
-   ```md
+2. **Add frontmatter** at the top of the file:
+   ```yaml
    ---
-   title: "Your Blog Post Title"
-   pubDate: 2023-12-01T00:00:00Z
-   tags: ["AI Alignment", "Interpretability", "Computational Neuroscience"]
+   title: "Your Writing Post Title"
+   pubDate: 2024-01-01
+   tags: ["Category"]
    draft: false
    ---
    ```
 
-3. **Fix image references**:
-   - Change Obsidian syntax `![[image.jpg]]` to `![Alt text](/images/image.jpg)`
-   - Copy the images to `public/images/` folder
+3. **Format your content**:
+   - Use markdown for formatting
+   - Add images to the `public/images` directory and reference them with `/images/filename.jpg`
+   - Use BibTeX for citations (see template for examples)
 
-4. **Fix internal links**:
-   - Change Obsidian links `[[Note Name]]` to `[Note Name](/blog/note-name)`
+4. **Test your post**:
+   - Run `npm run dev` to start the development server
+   - Visit `http://localhost:4321/writing` to see your writing posts
 
-5. **Fix callouts**:
-   ```md
-   > [!NOTE]
-   > This is a note callout from Obsidian
+## Automated Process
+
+I've created a script to automate this process. To use it:
+
+1. **Install dependencies**:
+   ```bash
+   npm run setup:converter
    ```
-   Becomes:
-   ```html
-   <div class="callout callout-note">
-   This is a note callout from Obsidian
-   </div>
+
+2. **Run the converter**:
+   ```bash
+   npm run convert:obsidian -- --folder "path/to/your/obsidian/vault"
    ```
 
-## Template Post
+The script will:
+- Convert Obsidian markdown to Astro-compatible markdown
+- Add proper frontmatter
+- Handle internal links and images
+- Place the converted files in the correct directory
 
-I've added a template post at `src/content/blog/TEMPLATE-POST.md` that you can duplicate and modify.
+## Template
 
-## Available Callout Types
+I've added a template post at `src/content/writing/_template.md` that you can duplicate and modify.
 
-- `callout-note`: Blue background
-- `callout-info`, `callout-todo`: Sky blue background
-- `callout-tip`, `callout-hint`, `callout-important`: Green background
-- `callout-warning`, `callout-caution`: Amber background
-- `callout-danger`, `callout-error`: Red background
-- `callout-question`: Purple background
-- `callout-quote`, `callout-cite`: Gray background
-- `callout-success`, `callout-check`, `callout-done`: Emerald background
-- `callout-fail`, `callout-failure`, `callout-missing`: Rose background
-- `callout-bug`: Red background
-- `callout-example`: Indigo background
+## Tips
 
-## Testing Your Posts
+- Use the template as a starting point
+- Keep your writing posts organized in the `src/content/writing/` directory
+- Use descriptive filenames that reflect the content
+- Add appropriate tags to help with categorization
+- Use BibTeX for citations to maintain academic standards
 
-Run the website locally to preview your posts:
-```bash
-npm run dev
-```
+## Preview
 
-Visit `http://localhost:4321/blog` to see your blog posts.
+To preview your site with the new writing post:
 
-## Publishing
+1. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-When you're ready to publish, commit and push your changes. If your `draft` is set to `false`, the post will be published; if `true`, it will only be visible in development mode. 
+2. Visit `http://localhost:4321/writing` to see your writing posts. 

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { processCitations, generateBibliography } from '../../utils/citations';
 
 // Generate static paths for all writing posts
 export async function getStaticPaths() {
@@ -14,10 +15,22 @@ export async function getStaticPaths() {
 // Get the writing post for this page
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+// Process citations if there's BibTeX data
+let processedContent = entry.body;
+let bibliography = '';
+
+// Check if there's BibTeX data in the content
+const bibtexMatch = entry.body.match(/@\w+\{[^}]+\}/g);
+if (bibtexMatch) {
+  const bibtex = bibtexMatch.join('\n\n');
+  processedContent = processCitations(entry.body, bibtex);
+  bibliography = generateBibliography(bibtex);
+}
 ---
 
 <BaseLayout
-  title={`${entry.data.title} | Alexander's Personal Site`}
+  title={`${entry.data.title} | Alexander Müller`}
   description={entry.data.title}
 >
   <article class="prose prose-slate dark:prose-invert max-w-none">
@@ -43,8 +56,13 @@ const { Content } = await entry.render();
       )}
     </p>
     
-    <div class="prose-lg">
-      <Content />
-    </div>
+    <div set:html={processedContent} />
+    
+    {bibliography && (
+      <div class="mt-12 pt-8 border-t dark:border-slate-700">
+        <h2 class="text-2xl font-bold mb-4">References</h2>
+        <div set:html={bibliography} />
+      </div>
+    )}
   </article>
 </BaseLayout> 

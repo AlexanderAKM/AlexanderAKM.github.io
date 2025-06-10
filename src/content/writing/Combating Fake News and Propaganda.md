@@ -5,7 +5,6 @@ tags: ["Ethics in AI"]
 draft: false
 ---
 
-
 The following is a short essay I had to write for the course Ethics in AI based on \cite{Oconnor}. I briefly summarize a specific part of the book, propose a question, and very succinctly try to answer and discuss it.
 
 The text "The Social Network" (pp.175-184) written by O'Connor and Weatherall discusses the challenges and possible solutions to combating fake news and propaganda. The authors realize how these possible solutions will inevitably lead to propagandists coming up with even more clever ways of countering it, and describe this eloquently as an"`arms race". They emphasize the necessity for society to adapt these possible solutions and underscore the importance of recognizing how social effects can significantly impact the spread of false beliefs. The authors point out how localized politics can reduce social distortion because of the more serious impact it has on people's lives, and how this makes misinformation more visible. Furthermore, it is suggested that the algorithms being used by members of a site ought to be made in such a way that they expose the member to material that is more widely shared and discussed among subgroups. The text highlights the responsibility of various stakeholders, including politicians, scientists, journalists, and social media platforms such as Facebook and Twitter, to hold themselves more responsible for promoting truth and counteracting propaganda. It advocates for more rigorous scientific standards and wants journalism to be more responsible by representing scientific consensus accurately. Moreover, the authors want legislative measures to restrict misinformation, similar to what Europe has done. Finally, the authors conclude with the acknowledgment that the suggestions they offer may only play a minor role in the ``arms race" against the propagandists. Therefore, they call for a collaborative effort of societal, political, and technological interventions to ensure the safety and well-being of the world. 
@@ -16,7 +15,10 @@ As we have suggested localized politics as a way to combat the spread of misinfo
 
 Although this question might seem to contradict itself due to the ask for something national or global when it inherently is localized, it instead serves us with the opportunity to think critically about how these successes are achieved in local settings and how we might scale them up. Local successes often depend on the direct relationship between the action undertaken and the impact felt at a personal level. If we want to replicate these successes on a national or global scale, we must replicate this personal relationship as well. Digital platforms have a huge reach, and as discussed in the text, can spread misinformation like wildfire. I propose leveraging digital platforms to replicate the 'local feel' on a larger scale. This could be done by having algorithms come up with personalized examples of how each national or global problem could impact the individual scrolling through the platform. This way, instead of feeling disconnected from the problem presented, and therefore being more prone to misinformation, one feels more personally engaged. Thus, we recreate the success of local politics on a national and potentially global scale, by recreating the personal relationship between the problems at hand and how it will impact each individual differently. 
 
-
-
-
-O’Connor, C., & Weatherall, J. O. (2019). The Misinformation Age: How False Beliefs Spread. Yale University Press. https://doi.org/10.2307/j.ctv8jp0hk
+@book{Oconnor,
+  author = {O'Connor, Cailin and Weatherall, James Owen},
+  title = {The Misinformation Age: How False Beliefs Spread},
+  publisher = {Yale University Press},
+  year = {2019},
+  doi = {10.2307/j.ctv8jp0hk}
+}
