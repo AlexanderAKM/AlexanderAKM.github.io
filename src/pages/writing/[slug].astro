@@ -2,16 +2,16 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-// Generate static paths for all blog posts
+// Generate static paths for all writing posts
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
-  return blogEntries.map(entry => ({
+  const writingEntries = await getCollection('writing');
+  return writingEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
 }
 
-// Get the blog post for this page
+// Get the writing post for this page
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
@@ -21,7 +21,7 @@ const { Content } = await entry.render();
   description={entry.data.title}
 >
   <article class="prose prose-slate dark:prose-invert max-w-none">
-    <a href="/blog" class="inline-block mb-6 text-blue-600 hover:underline">← Back to all posts</a>
+    <a href="/writing" class="inline-block mb-6 text-blue-600 hover:underline">← Back to all posts</a>
     
     <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
     <p class="text-slate-500 dark:text-slate-400 mb-8">

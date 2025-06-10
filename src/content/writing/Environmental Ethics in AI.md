@@ -1,0 +1,38 @@
+---
+title: "Environmental Ethics in AI"
+pubDate: 2024-03-04
+tags: ["Ethics in AI"]
+draft: false
+---
+
+The following is a short essay I had to write for the course Ethics in AI based on \cite{Moor}. I briefly summarize it, propose a question, and very succinctly try to answer and discuss it.
+
+The article, ``The Nature, Importance, and Difficulty of Machine Ethics", written by James H. Moor \cite{Moor}, discusses the complex integration of ethical frameworks within the realm of machine operations. Moor differentiates between ethical and non-ethical values in technology, pointing out that computing technology, by nature, follows normative standards based on its objectives. Thus, a clear understanding of what constitutes machine ethics is necessary. Moor navigates through the concept of equipping machines with ethical decision-making capabilities and highlights the distinction between implicit and explicit ethical agents. Implicit ethical agents operate under human-defined ethical constraints, whereas explicit ethical agents are capable of autonomously reasoning about ethical principles. This progression, from implicit to explicit ethical agents, explains a potential paradigm shift in machine functionality, from mere tools to agents capable of moral judgment. This raises profound questions about the future relationship between humans and machines. The concept of explicit ethical agents, as they are introduced by Moor, serves critical importance in understanding how ethics can be integrated within machine functionality. Moor also advocates for more exploration into machines that can act as explicit ethical agents, which could significantly benefit areas like disaster relief by making fast, potentially life-saving decisions.
+
+An important aspect of Moor's discourse on machine ethics is how machines might handle complex ethical decisions, especially in scenarios that were not directly anticipated by their creators. This discussion sets the stage for considering more specialized ethical dilemmas, such as how artificial agents should navigate the terrain of environmental ethics versus immediate human and economic needs. Although recent developments have primarily focused on the latter, the urgency and importance of environmental issues are increasingly pressing, and require us to find a more balanced approach in the ethics of artificial agents.
+
+Considering that recent developments have mostly been concerned with human and economic needs, how might an artificial agent prioritize environmental ethics in its decision-making processes, especially when these considerations conflict with short-term human desires or economic gains?
+
+To answer this question, we must first get acquainted with environmental ethics. In \cite{sep-ethics-environmental}, it is defined as ``the discipline in philosophy that studies the moral relationship of human beings to, and also the value and moral status of, the environment and its non-human contents." So, if we want to prioritize environmental ethics in the decision-making processes of artificial agents, we must focus less on humans, and more on the environment and its non-human contents. The challenge lies in creating an agent that can weigh environmental ethics against immediate economic gains and human desires. One solution could involve creating agents with the ability to simulate and predict the environmental impact of various moral decisions. Data from environmental sciences could be used for training, and the predictive capability that the agent would attain, could guide it towards decisions that balance environmental preservation with short-term benefits. However, this approach raises questions about the values and priorities encoded into the agents and who decides them. Moreover, there are numerous limitations, such as the complexity of environmental data and the unpredictability of ecological systems, which all add layers of difficulty to this task. We must also not forget that environmental stances differ all throughout the world. Although all of these challenges will most likely remain, it is crucial that we move away from the anthropocentric approach to AI that we have had for all this time, to a more balanced approach. Only then, we can develop an artificial agent that prioritizes environmental ethics in its decision-making processes, especially when these considerations conflict with short-term human desires or economic gains.
+
+@InCollection{sep-ethics-environmental,
+	author       =	{Brennan, Andrew and Lo, Norva Y. S.},
+	title        =	{{Environmental Ethics}},
+	booktitle    =	{The {Stanford} Encyclopedia of Philosophy},
+	editor       =	{Edward N. Zalta},
+	howpublished =	{\url{https://plato.stanford.edu/archives/sum2022/entries/ethics-environmental/}},
+	year         =	{2022},
+	edition      =	{{S}ummer 2022},
+	publisher    =	{Metaphysics Research Lab, Stanford University}
+}
+
+@ARTICLE{Moor,
+  author={Moor, J.H.},
+  journal={IEEE Intelligent Systems}, 
+  title={The Nature, Importance, and Difficulty of Machine Ethics}, 
+  year={2006},
+  volume={21},
+  number={4},
+  pages={18-21},
+  keywords={Ethics;Logic;Humans;Airplanes;Artificial intelligence;Educational institutions;Propulsion;Testing;Professional activities;Computers;machine ethics;computer ethics;ethical agents},
+  doi={10.1109/MIS.2006.80}}
