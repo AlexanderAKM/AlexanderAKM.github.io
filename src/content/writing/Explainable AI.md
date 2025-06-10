@@ -14,13 +14,3 @@ There are numerous challenges in the field of explainable AI. We are broadly con
 As explainability and transparency should play an essential role in the deployment of ML systems in sensitive areas such as healthcare or criminal justice, who should bear the primary responsibility for ensuring that these systems do not operate as opaque 'black boxes'?
 
 We have three main candidates that can bear primary responsibility: Government, institutions that develop these ML systems, and intuitions that apply these systems. From these three, I believe that the government stands out as the most appropriate, and also capable entity. The threat of opaque systems being deployed in sensitive areas is not local, but rather regional, national, or even global. Therefore, governments, by virtue of their oversight capabilities, are positioned in such a way that they can set and enforce standards that ensure transparency and accountability in AI applications. Moreover, governments have a general overview of societal needs and are, or at least should be, in a position to make the most informed decisions on legislation. Although we also might wish for developers and users of ML systems to bear responsibility, realistically, we cannot expect it from them, because of many financial incentives that they might be swayed by. By legislating transparency requirements and overseeing that they are implemented, governments can ensure that ML systems are developed and deployed in sensitive areas so that everyone involved can understand them. Only then, will 'black boxes' become slightly more 'white'.
-
-@article{explainable-ai-survey,
-  author = {Adadi, Amina and Berrada, Mohammed},
-  title = {Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)},
-  journal = {IEEE Access},
-  volume = {6},
-  pages = {52138--52160},
-  year = {2018},
-  doi = {10.1109/ACCESS.2018.2870052}
-}
