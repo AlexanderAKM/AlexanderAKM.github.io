@@ -1,6 +1,7 @@
 ---
 title: "How to Beat Procrastination"
 pubDate: 2025-06-08
+tags: ["Self-improvement"]
 draft: false
 ---
 

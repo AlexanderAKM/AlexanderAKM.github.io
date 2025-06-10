@@ -2,6 +2,7 @@
 title: "AI is (not) Magic"
 pubDate: 2024-04-25T21:55:31Z
 draft: false
+tags: ["Fiction", "AI Safety"]
 ---
 
 I study Artificial Intelligence (AI) at university. When I talk with my family, friends, and anyone else who doesn't know what that means but has heard about it on social media or TV, I get some interesting conversations. 

@@ -2,6 +2,7 @@
 title: "The Diving Reflex Explained"
 pubDate: 2024-10-21T21:55:31Z
 draft: false
+tags: ["Neuroscience", "Evolution"]
 ---
 
 **Think about how you would feel if you dip your head underwater for about 10 to 20 seconds.**

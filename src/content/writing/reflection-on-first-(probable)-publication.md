@@ -2,6 +2,7 @@
 title: "Reflection on First (Probable) Publication"
 pubDate: 2025-05-24T18:49:00Z
 draft: false
+tags: ["Reflection"]
 ---
 
 Around 2 months ago, I got the opportunity to join a research project on activation engineering. Broadly speaking, we are investigating a potentially better method of steering AI models toward particular (desirable) behaviors. 

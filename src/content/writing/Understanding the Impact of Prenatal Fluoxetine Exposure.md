@@ -2,6 +2,7 @@
 title: "Understanding the Impact of Prenatal Fluoxetine Exposure"
 pubDate: 2024-10-29T21:55:31Z
 draft: false
+tags: ["Neuroscience", "Depression"]
 ---
 
 During pregnancy, the majority of women report psychological stress, with 7% of women developing major depression (Andersson et al., 2003; Gorman et al., 2004), and an additional 7% developing minor depression (Fournier et al., 2010). Prenatal (during pregnancy) depression is linked to various complications in the offspring. These include but are not limited to delayed development in 18-month-old children, increased anxiety in 6 9-year-old children, and a 4.7-fold increased risk of depression for 16-year-olds exposed to prenatal depression (Davis & Sandman, 2012; Deave et al., 2008; Pawlby et al., 2009).
