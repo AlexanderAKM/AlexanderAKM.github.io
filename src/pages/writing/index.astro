@@ -14,35 +14,6 @@ const posts = allPosts.sort(
 
 // Extract all tags from posts
 const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort();
-
-// --- Filtering logic ---
-const url = new URL(Astro.request.url);
-const selectedTag = url.searchParams.get('tag');
-
-// Debug information
-console.log('=== DEBUG INFO ===');
-console.log('Full URL:', Astro.request.url);
-console.log('Search params:', url.searchParams.toString());
-console.log('Selected tag (raw):', selectedTag);
-console.log('Selected tag (decoded):', selectedTag ? decodeURIComponent(selectedTag) : null);
-console.log('Available tags:', allTags);
-console.log('Posts with tags:', posts.map(p => ({ title: p.data.title, tags: p.data.tags })));
-
-// Use decoded tag for comparison
-const decodedSelectedTag = selectedTag ? decodeURIComponent(selectedTag) : null;
-
-const filteredPosts = decodedSelectedTag
-  ? posts.filter(post => {
-      const postTags = post.data.tags || [];
-      const hasTag = postTags.includes(decodedSelectedTag);
-      console.log(`Post "${post.data.title}" has tags:`, postTags, 'includes selected tag:', hasTag);
-      return hasTag;
-    })
-  : posts;
-
-console.log('Decoded selected tag:', decodedSelectedTag);
-console.log('Filtered posts count:', filteredPosts.length);
-console.log('==================');
 ---
 
 <BaseLayout
