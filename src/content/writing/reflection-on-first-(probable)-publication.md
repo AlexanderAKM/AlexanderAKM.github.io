@@ -1,11 +1,11 @@
 ---
-title: "Reflection on First (Probable) Publication"
+title: "Reflection on First (Likely) Publication"
 pubDate: 2025-05-24T18:49:00Z
 draft: false
 tags: ["Reflection"]
 ---
 
-Around 2 months ago, I got the opportunity to join a research project on activation engineering. Broadly speaking, we are investigating a potentially better method of steering AI models toward particular (desirable) behaviors. 
+Recently, I had the chance to work on my first research project in machine learning, specifically AI safety. I went in with a lot of assumptions about what research would be like, and many of them turned out to be wrong.
 
 Although I've been reading and discussing many of the latest papers on AI safety, this was my first time working on *true research*, or so I thought. I had many expectations. Many of them incorrect; others, blatant misconceptions. This is an attempt to lay them out, see why I had these expectations in the first place, and how I can learn from them.
 
