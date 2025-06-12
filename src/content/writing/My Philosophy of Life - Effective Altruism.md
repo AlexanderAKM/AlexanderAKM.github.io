@@ -32,5 +32,3 @@ It seems to me that everyone must have some kind of value hierarchy, with some v
 Answering the two questions is now trivial! 'Good' is everything that increases the welfare of life and 'bad' is everything that decreases the welfare of life. And, I prefer a better world over a worse world because it's better for life.
 
 Of course, much nuance is left out in the above description. I hope it gives a rough overview of my life philosophy, and *why* it is my life philosophy. I'll be writing much more on this topic in an attempt to elaborate on possible objections that I've now left out in the open. 
-
-For now, perhaps take a moment or two to contemplate what your life philosophy is. More concretely, try listing your value hierarchy; what is at the top, and why?
