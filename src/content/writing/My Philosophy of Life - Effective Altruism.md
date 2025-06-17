@@ -2,7 +2,7 @@
 title: "My Philosophy of Life: Effective Altruism"
 pubDate: 2025-06-12
 tags: ["Effective Altruism", "reflection"]
-draft: false
+draft: true
 ---
 
 Over the past 1.5 years I've significantly changed my view on how I should live my life. Concisely, I went from not thinking about a personal philosophy of life to, roughly, believing the philosophy of effective altruism is what I should follow. Here, I'll briefly outline what effective altruism is and why it makes most sense to live one's life accordingly.
