@@ -4,7 +4,9 @@ import { getCollection } from 'astro:content';
 
 // Generate static paths for all writing posts
 export async function getStaticPaths() {
-  const writingEntries = await getCollection('writing');
+  const writingEntries = await getCollection('writing', ({ data }) => {
+    return import.meta.env.PROD ? !data.draft : true;
+  });
   return writingEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -30,14 +32,14 @@ const { Content } = await entry.render();
         month: 'long',
         day: 'numeric'
       })}
-      {entry.data.tags?.length && (
+      {entry.data.tags && entry.data.tags.length > 0 && (
         <span class="ml-2">
           {entry.data.tags.map((tag, i) => (
-            <span key={tag}>
+            <span>
               <span class="inline-block bg-slate-200 dark:bg-slate-700 rounded-full px-2 py-1 text-xs">
                 {tag}
               </span>
-              {i < entry.data.tags.length - 1 ? ' ' : ''}
+              {i < (entry.data.tags?.length || 0) - 1 ? ' ' : ''}
             </span>
           ))}
         </span>
