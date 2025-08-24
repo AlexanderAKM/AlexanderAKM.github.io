@@ -70,7 +70,13 @@ const latestPosts = posts
 
 	{latestPosts.length > 0 && (
 		<section class="py-12">
-			<h2 class="text-2xl md:text-3xl font-bold mb-6">Latest Writing</h2>
+			<h2 class="text-2xl md:text-3xl font-bold mb-2">Latest Writing</h2>
+			<p class="text-sm text-slate-600 dark:text-slate-400 mb-6">
+				Also on
+				<a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"> Alexander’s Substack</a>
+				and
+				<a href="https://aisig.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"> AISIG’s Substack</a>.
+			</p>
 			<div class="space-y-6">
 				{latestPosts.map(post => (
 					<div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
