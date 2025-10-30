@@ -1,5 +1,5 @@
 ---
-title: "Why Care About AI Safety"
+title: "Why Care About AI Safety?"
 pubDate: 2025-05-19
 tags: ["AI Safety"]
 draft: false
