@@ -43,7 +43,7 @@ Really, it might sound funny, but (and this is now a large problem) systems like
 
 Cheers, Alexander
 
-*Any kind of feedback, questions, suggestions for me to write about or anything else is greatly appreciated at alexanderklavermuller@gmail.com*. 
+
 
 
 **References**

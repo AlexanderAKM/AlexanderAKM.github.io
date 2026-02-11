@@ -2,7 +2,7 @@
 title: "Writing Post Title"
 pubDate: 2024-01-01
 tags: ["Category"]
-draft: false
+draft: true
 ---
 
 Write an engaging introduction to your writing post here...

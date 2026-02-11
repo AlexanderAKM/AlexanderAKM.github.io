@@ -47,7 +47,7 @@ You can:
 
 - **Open an Issue:** If you encounter any problems or have suggestions, you can [open an issue](https://github.com/AlexanderAKM/MNIST-tutorial/issues) on this repository.
 - **Submit a Pull Request:** If you'd like to contribute code or improvements, feel free to fork the repository, make your changes, and submit a pull request.
-- **Reach Out Directly:** If you have any questions, feedback, or just want to chat about machine learning, you can reach out to me directly via [email](alexanderklavermuller@gmail.com)
+- **Reach Out Directly:** If you have any questions, feedback, or just want to chat about machine learning, you can reach out to me directly.
 
 I appreciate your interest in this project and look forward to any contributions or discussions!
 
