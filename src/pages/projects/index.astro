@@ -6,110 +6,217 @@ import trafficSignalImage from '../../images/traffic_signal.png';
 ---
 
 <BaseLayout
-  title="Research | Alexander Müller"
-  description="Explore my AI alignment and mechanistic interpretability research projects."
+  title="Research & Projects | Alexander Müller"
+  description="Publications, research projects, and academic work in AI alignment, mechanistic interpretability, and computational neuroscience."
 >
+  <!-- Publications -->
   <section class="py-8">
-    <h2 class="text-3xl font-bold mb-6">Publications</h2>
-    <div class="border dark:border-slate-700 rounded-lg p-10 text-center">
-      <a
-        href="https://scholar.google.com/citations?user=uWrkQLsAAAAJ&hl=en&oi=ao"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-xl text-blue-600 hover:underline"
-      >
-        Google Scholar →
-      </a>
-    </div>
-  </section>
-  
-  <section class="py-8">
-    <h1 class="text-4xl font-bold mb-8">Projects</h1>
+    <h1 class="text-4xl font-bold mb-2">Publications</h1>
+    <p class="text-slate-600 dark:text-slate-400 mb-8">
+      Full list on <a href="https://scholar.google.com/citations?user=uWrkQLsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Google Scholar</a>.
+    </p>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Project 1 -->
-      <div class="border dark:border-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-        <div class="h-64 bg-slate-200 dark:bg-slate-800 relative overflow-hidden">
-          <Image 
-            src={trafficSignalImage} 
-            alt="Traffic Signal Intersection" 
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div class="p-6">
-          <h2 class="text-2xl font-bold mb-2">Traffic Signal Intersection</h2>
-          <p class="text-slate-600 dark:text-slate-400 mb-4">
-            Project on reinforcement learning applied to traffic signal control at intersections, optimizing traffic flow and reducing congestion.
-          </p>
-          <div class="flex gap-4">
-            <a href="https://github.com/AlexanderAKM/Traffic-Signal-Control-Simulator" class="text-blue-600 hover:underline">GitHub →</a>
+    <div class="space-y-6">
+      <!-- Paper 1 -->
+      <div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-bold mb-1">
+              <a href="https://arxiv.org/abs/2510.21524" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400">
+                EU-Agent-Bench: Measuring Illegal Behavior of LLM Agents Under EU Law
+              </a>
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">
+              I. Lichkovski, <strong>A. Müller</strong>, M. Ibrahim, T. Mhundwa
+            </p>
+            <p class="text-sm text-slate-500 dark:text-slate-500 mb-3">arXiv preprint, 2025</p>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              A benchmark for evaluating how well LLM agents comply with EU legislation. Investigates whether language model agents exhibit illegal behavior when deployed in realistic scenarios governed by European law.
+            </p>
           </div>
+          <span class="text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 px-2 py-1 rounded-full whitespace-nowrap">2 citations</span>
+        </div>
+        <div class="flex gap-3 mt-4">
+          <a href="https://arxiv.org/abs/2510.21524" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:underline">arXiv →</a>
         </div>
       </div>
-      
-      <!-- Project 2 -->
-      <div class="border dark:border-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-        <div class="h-64 bg-slate-200 dark:bg-slate-800 relative overflow-hidden">
-          <Image 
-            src={mnistImage} 
-            alt="MNIST Tutorial Series" 
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div class="p-6">
-          <h2 class="text-2xl font-bold mb-2">MNIST Tutorial Series</h2>
-          <p class="text-slate-600 dark:text-slate-400 mb-4">
-            A series of tutorials on tackling the MNIST handwritten digit classification task using various neural network architectures and techniques.
+
+      <!-- Paper 2 -->
+      <div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+        <div>
+          <h3 class="text-lg font-bold mb-1">
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=uWrkQLsAAAAJ&citation_for_view=uWrkQLsAAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400">
+              Uncovering Internal Prediction Mechanisms of Transformer-Based Chemical Foundation Models
+            </a>
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">
+            <strong>A. Müller</strong>, J. Cardenas-Cartagena, R. Pollice
           </p>
-          <div class="flex gap-4">
-            <a href="https://github.com/AlexanderAKM/MNIST-tutorials" class="text-blue-600 hover:underline">GitHub →</a>
-          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-500 mb-3">ChemRxiv, 2025</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">
+            Applying mechanistic interpretability techniques to chemical foundation models, investigating how transformers internally represent and predict molecular properties. Follow-up from BSc thesis research.
+          </p>
+        </div>
+        <div class="flex gap-3 mt-4">
+          <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-d1j8k" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:underline">ChemRxiv →</a>
         </div>
       </div>
-      
-      <!-- Project 3 - Commented out as requested
-      <div class="border dark:border-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-        <div class="h-64 bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
-          <div class="text-4xl font-bold text-slate-400">LLM Safety</div>
-        </div>
-        <div class="p-6">
-          <h2 class="text-2xl font-bold mb-2">LLM Alignment Research</h2>
-          <p class="text-slate-600 dark:text-slate-400 mb-4">
-            Investigating techniques for aligning large language models with human values and preventing harmful outputs through representation engineering.
+
+      <!-- Paper 3 -->
+      <div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+        <div>
+          <h3 class="text-lg font-bold mb-1">
+            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=uWrkQLsAAAAJ&citation_for_view=uWrkQLsAAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400">
+              From Steering Vectors to Conceptors: Compositional Affine Activation Steering for LLMs
+            </a>
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">
+            S. Abreu, J. Postmus, <strong>A. Müller</strong>, J.L. Ferrao, I. Lichkovski, K.F. Michalak, et al.
           </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded-full">Transformers</span>
-            <span class="text-xs bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded-full">AI Alignment</span>
-            <span class="text-xs bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded-full">Safety Mechanisms</span>
-          </div>
-          <div class="flex gap-4">
-            <a href="#" class="text-blue-600 hover:underline">Project Details →</a>
-          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-500 mb-3">2025</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">
+            A novel approach to controlling LLM behavior through compositional activation steering, extending steering vectors with conceptors for more fine-grained and composable behavioral control.
+          </p>
+        </div>
+        <div class="flex gap-3 mt-4">
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=uWrkQLsAAAAJ&citation_for_view=uWrkQLsAAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:underline">Paper →</a>
         </div>
       </div>
-      -->
-      
-      <!-- Project 4 - Commented out as requested
-      <div class="border dark:border-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-        <div class="h-64 bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
-          <div class="text-4xl font-bold text-slate-400">Neuralignment</div>
-        </div>
-        <div class="p-6">
-          <h2 class="text-2xl font-bold mb-2">Neuralignment Research Group</h2>
-          <p class="text-slate-600 dark:text-slate-400 mb-4">
-            Leading the Neuralignment research group at AI Initiative Groningen, facilitating discussions and collaborative research on AI alignment challenges.
+
+      <!-- Paper 4 -->
+      <div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+        <div>
+          <h3 class="text-lg font-bold mb-1">
+            <a href="/projects/cbrn-multi-agent-debate.pdf" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">
+              Collective Deliberation for Safer CBRN Decisions: A Multi-Agent LLM Debate Pipeline
+            </a>
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">
+            <strong>A. Müller</strong>, A. Golicins, G. Lesnic
           </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded-full">AI Safety</span>
-            <span class="text-xs bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded-full">Research Coordination</span>
-            <span class="text-xs bg-slate-200 dark:bg-slate-700 px-2 py-1 rounded-full">Group Leadership</span>
-          </div>
-          <div class="flex gap-4">
-            <a href="https://www.aisig.org/groups" target="_blank" class="text-blue-600 hover:underline">Group Details →</a>
-          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-500 mb-3">AI Safety Initiative Groningen &middot; Apart Research, 2025</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">
+            Testing whether structured multi-agent LLM debate can improve reliability in high-stakes CBRN decision-making without model retraining. Collective debate significantly outperformed the best individual model, with resilience to adversarial persuasion.
+          </p>
+        </div>
+        <div class="flex gap-3 mt-4">
+          <a href="/projects/cbrn-multi-agent-debate.pdf" target="_blank" class="text-sm text-blue-600 hover:underline">PDF →</a>
+          <a href="https://github.com/AlexanderAKM/CBRN_LLM_DEBATE" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:underline">GitHub →</a>
         </div>
       </div>
-      -->
     </div>
   </section>
-</BaseLayout> 
+
+  <!-- Course Projects -->
+  <section class="py-8">
+    <h2 class="text-3xl font-bold mb-4">Course Projects</h2>
+    <p class="text-slate-600 dark:text-slate-400 mb-6">
+      Selected academic projects from my MSc coursework, ranging from multi-agent systems and epistemic logic to advanced machine learning and proof theory. Each gave me the chance to dig deeper into topics I care about.
+    </p>
+    
+    <div class="space-y-6">
+      <!-- Wisdom of the LLM Crowd -->
+      <div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-bold mb-1">
+              <a href="/projects/wisdom-of-llm-crowd.pdf" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">
+                The Wisdom of the LLM Crowd
+              </a>
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">
+              A. Todorov, <strong>A. Müller</strong>, M. Umaña, S. Ferguson
+            </p>
+            <p class="text-sm text-slate-500 dark:text-slate-500 mb-3">Design of Multi-Agent Systems &middot; University of Groningen</p>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Can collective LLM deliberation produce moral judgments more aligned with human preferences than individual models? We simulated deliberative groups of five LLMs on 1,000 Moral Machine dilemmas and found that deliberation actually <em>worsened</em> moral alignment. Debate-induced extremization collapsed nuanced priors into simplistic heuristics. A cautionary tale about multi-agent alignment.
+            </p>
+          </div>
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-2 py-1 rounded-full whitespace-nowrap"></span>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-3 mb-3">
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">Multi-Agent Systems</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">AI Alignment</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">Moral Machine</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">LLM Debate</span>
+        </div>
+        <a href="/projects/wisdom-of-llm-crowd.pdf" target="_blank" class="text-sm text-blue-600 hover:underline">Read PDF →</a>
+      </div>
+
+      <!-- VAE Intervention Analysis -->
+      <div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+        <div>
+          <h3 class="text-lg font-bold mb-1">
+            <a href="/projects/vae-latent-space-intervention.pdf" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">
+              Intervention Analysis on the Latent Space of Variational Autoencoders
+            </a>
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">
+            <strong>A. Müller</strong>, A. Predescu, T. Ludwig, M. Umaña Lemus, A. Sultanji
+          </p>
+          <p class="text-sm text-slate-500 dark:text-slate-500 mb-3">Advanced Machine Learning &middot; University of Groningen</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">
+            How does training data diversity influence uncertainty and reconstruction blur in VAEs? We varied class and sample diversity on MNIST/FashionMNIST, then applied intervention analysis to identify which latent dimensions contribute most to reconstruction error. More diverse data leads to richer, more interpretable latent spaces.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-3 mb-3">
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">VAEs</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">Interpretability</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">Uncertainty</span>
+        </div>
+        <div class="flex gap-3">
+          <a href="/projects/vae-latent-space-intervention.pdf" target="_blank" class="text-sm text-blue-600 hover:underline">Read PDF →</a>
+          <a href="https://github.com/AlexanderAKM/Advanced_ML" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:underline">GitHub →</a>
+        </div>
+      </div>
+
+      <!-- Strategic Voting / LAMAS -->
+      <div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+        <div>
+          <h3 class="text-lg font-bold mb-1">
+            <a href="/projects/strategic-voting-epistemic-logic.pdf" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">
+              Bridging Social Choice and Dynamic Epistemic Logic by Modeling Strategic Voting
+            </a>
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">
+            <strong>A. Müller</strong>, J. Wallinga, J. de Vries, L. Tanis
+          </p>
+          <p class="text-sm text-slate-500 dark:text-slate-500 mb-3">Logical Aspects of Multi-Agent Systems (LAMAS) &middot; University of Groningen</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">
+            Modeling strategic voting in repeated elections using dynamic epistemic logic. We model polls as public announcements in S5 epistemic logic and use the Kendall Tau distance as a manipulation heuristic, showing how a strategic voter can successfully manipulate outcomes while inadvertently creating common knowledge.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-3 mb-3">
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">Epistemic Logic</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">Social Choice Theory</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">Game Theory</span>
+        </div>
+        <a href="/projects/strategic-voting-epistemic-logic.pdf" target="_blank" class="text-sm text-blue-600 hover:underline">Read PDF →</a>
+      </div>
+
+      <!-- Proof Theory Assignment -->
+      <div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
+        <div>
+          <h3 class="text-lg font-bold mb-1">
+            <a href="/projects/proof-theory-assignment.pdf" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">
+              Modal Logic and Proof Theory: Sequent Calculus Proofs
+            </a>
+          </h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mb-2">
+            <strong>A. Müller</strong>
+          </p>
+          <p class="text-sm text-slate-500 dark:text-slate-500 mb-3">Modal Logic and Proof Theory &middot; University of Groningen</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm">
+            Individual assignment on sequent calculus derivations for propositional and modal logic. Covers proofs of standard axioms, cut elimination, and derivations in systems including S4 and S5 modal logic.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-3 mb-3">
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">Modal Logic</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">Proof Theory</span>
+          <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">Sequent Calculus</span>
+        </div>
+        <a href="/projects/proof-theory-assignment.pdf" target="_blank" class="text-sm text-blue-600 hover:underline">Read PDF →</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import obsidianGraph from '../../images/Obsidian_graph.png';
+---
+
+<BaseLayout
+  title="Personal | Alexander Müller"
+  description="Beyond research: Obsidian, sports, piano, reading, philosophy, and what I care about outside of AI safety."
+>
+  <section class="py-8">
+    <h1 class="text-4xl font-bold mb-4">Personal</h1>
+    <p class="text-lg text-slate-600 dark:text-slate-300 mb-10">
+      There's more to life than AI safety (though it sometimes doesn't feel like it). Here's what I care about and spend time on outside of research.
+    </p>
+
+    <!-- Obsidian / Second Brain -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">My Second Brain: Obsidian</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div class="space-y-4">
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            I'm a devoted Obsidian user. My vault currently sits at around <strong class="text-slate-900 dark:text-slate-100">3,000 notes</strong> and counting. 
+          </p>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            My philosophy around Obsidian is that it's genuinely my second brain. It forces me to always integrate what I learn into my already existing knowledge base. Every new idea has to find its place in the web of things I already know. This makes it incredibly powerful for synthesizing existing ideas into new writing, connecting seemingly unrelated concepts, and maintaining a comprehensive record of my intellectual journey.
+          </p>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            I'm planning to write an elaborate post about why Obsidian is amazing and how I use it. Stay tuned on <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">my Substack</a>.
+          </p>
+        </div>
+        <div class="border dark:border-slate-700 rounded-lg overflow-hidden shadow-md">
+          <Image 
+            src={obsidianGraph} 
+            alt="My Obsidian knowledge graph with ~3,000 interconnected notes" 
+            class="w-full h-auto"
+          />
+          <p class="text-xs text-center py-2 text-slate-500 dark:text-slate-400">My Obsidian graph, ~3,000 interconnected notes</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Writing & Substacks -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Writing</h2>
+      <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+        I regularly write on two Substacks:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow block">
+          <h3 class="font-bold mb-2">Alexander's Substack</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Personal writing about books and quotes from them, philosophy, mathematics, game theory, neuroscience, effective altruism, longevity, sports, coordination, and more.</p>
+        </a>
+        <a href="https://aisig.substack.com/" target="_blank" rel="noopener noreferrer" class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow block">
+          <h3 class="font-bold mb-2">AISIG's Substack</h3>
+          <p class="text-sm text-slate-600 dark:text-slate-400">AI safety focused writing: technical alignment, governance, policy, and updates from the <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AI Safety Initiative Groningen</a>.</p>
+        </a>
+      </div>
+      <p class="text-sm text-slate-500 dark:text-slate-500 mt-4">
+        I also post some writing on <a href="/writing" class="text-blue-600 hover:underline">this website</a>, though the Substacks are more frequently updated.
+      </p>
+    </div>
+
+    <!-- Interests & Philosophy -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Interests</h2>
+      <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+        I have a pretty wide range of interests that I actively explore through reading, writing, and conversation.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        {[
+          { name: 'Philosophy', desc: 'Ethics, effective altruism, existentialism' },
+          { name: 'Mathematics', desc: 'Analysis, game theory, foundations' },
+          { name: 'Neuroscience', desc: 'Computational and cognitive' },
+          { name: 'Books', desc: 'Widely and voraciously' },
+          { name: 'Game Theory', desc: 'Coordination, cooperation, incentives' },
+          { name: 'Longevity', desc: 'Health optimization, aging research' },
+          { name: 'Effective Altruism', desc: 'Doing the most good' },
+          { name: 'Coordination', desc: 'Collective action problems' },
+          { name: 'Sports Science', desc: 'Training, physiology, recovery' },
+        ].map(interest => (
+          <div class="border dark:border-slate-700 rounded-lg p-4">
+            <h3 class="font-bold text-sm mb-1">{interest.name}</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400">{interest.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Sports & Music -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">Sports & Music</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-4">
+          <h3 class="font-bold text-lg">Sports</h3>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            I love competing in sports. I played <strong class="text-slate-900 dark:text-slate-100">football</strong> and <strong class="text-slate-900 dark:text-slate-100">tennis</strong> for many years, and I'm currently getting into <strong class="text-slate-900 dark:text-slate-100">judo</strong>. There's something about the combination of physical challenge and strategic thinking that I find deeply satisfying.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <h3 class="font-bold text-lg">Piano</h3>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+            I've played the <strong class="text-slate-900 dark:text-slate-100">piano</strong> for essentially my whole life. It's one of those constants that has been with me through everything, a way to think differently and find flow.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Values -->
+    <div class="mb-12">
+      <h2 class="text-2xl font-bold mb-4">What I Value</h2>
+      <div class="border dark:border-slate-700 rounded-lg p-6 bg-slate-50 dark:bg-slate-800/50">
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+          I really love to read, spend time with loved ones, and have a banger conversation. I believe in <a href="https://www.effectivealtruism.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">effective altruism</a>: trying to do as much good as possible with the resources and time we have. I value honest feedback (hence the <a href="/feedback" class="text-blue-600 hover:underline">feedback page</a>), intellectual humility, and genuine curiosity.
+        </p>
+        <p class="text-slate-600 dark:text-slate-400 leading-relaxed italic">
+          "In pursuit of a world where everyone wants to cooperate in prisoner's dilemmas."
+        </p>
+      </div>
+    </div>
+
+    <!-- Connect -->
+    <div class="text-center py-8 border-t dark:border-slate-700">
+      <p class="text-slate-600 dark:text-slate-400 mb-4">Want to talk about any of this? I'd love to hear from you.</p>
+      <div class="flex gap-3 justify-center flex-wrap">
+        <a href="/contact" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">Get in touch</a>
+        <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="px-5 py-2 border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-colors">Follow on Substack</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

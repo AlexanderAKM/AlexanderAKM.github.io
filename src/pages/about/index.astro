@@ -5,73 +5,165 @@ import linkedinPhoto from '../../images/Linkedin_foto.jpg';
 ---
 
 <BaseLayout
-  title="About | Alexander's Personal Site"
-  description="Learn more about Alexander, an AI researcher focusing on AI Alignment and Interpretability."
+  title="About | Alexander Müller"
+  description="AI alignment researcher, Co-Director of AISIG, MSc student at University of Groningen. Focusing on mechanistic interpretability, game theory, and ensuring AI goes well."
 >
   <section class="py-8">
     <h1 class="text-4xl font-bold mb-8">About Me</h1>
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Main content -->
       <div class="md:col-span-2 space-y-6">
-        <p class="text-lg leading-relaxed">
+        <p class="text-lg leading-relaxed italic text-slate-700 dark:text-slate-300">
           In pursuit of a world where everyone wants to cooperate in prisoner's dilemmas.
         </p>
 
         <p class="text-lg leading-relaxed">
-          I am currently studying Artificial Intelligence (AI) at the University of Groningen, focusing strongly on AI Alignment. I believe that within a worringly short time frame AI will become more powerful, and currently, by default, more uninterpretable. Combined with the enormous incentives to prioritize capabilities over safety, this creates a serious risk of developing systems we do not fully understand and cannot reliably control.
+          I am currently studying Artificial Intelligence (AI) at the University of Groningen, focusing strongly on AI Alignment. I believe that within a worryingly short time frame AI will become more powerful, and currently, by default, more uninterpretable. Combined with the enormous incentives to prioritize capabilities over safety, this creates a serious risk of developing systems we do not fully understand and cannot reliably control.
         </p>
         
         <p class="text-lg leading-relaxed">
-          I am actively exploring how we can ensure this goes well, both at a high level and through technical research. On the high-level side I do this by co-directing <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG</a>. On the technical side I'm currently conducting research in mechanistic interpretability where I investigate how to control frontier models using representation engineering.
+          I am actively exploring how we can ensure this goes well, both at a high level and through technical research. On the high-level side I do this by co-directing <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG</a>, where we run education programs, facilitate research published at NeurIPS and ICLR, and collaborate with multiple organizations on AI safety, including Dutch municipalities. On the technical side, I conduct research in <a href="/projects" class="text-blue-600 hover:underline">mechanistic interpretability</a> and <a href="https://arxiv.org/abs/2510.21524" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">agentic LLM behavior under EU legislation</a>, and am currently exploring the intersection of <a href="https://aisig.substack.com/p/mediations-on-moloch-in-the-ai-rat" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">game theory and AI safety</a>.
         </p>
+
+        <!-- Education -->
+        <h2 class="text-2xl font-bold mt-10 pt-4 border-t dark:border-slate-700">Education</h2>
         
-        <h2 class="text-2xl font-bold mt-8">My Research Interests</h2>
-        
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <ul class="list-disc list-inside space-y-1">
-              <li>Mechanistic Interpretability</li>
-              <li>Computational Neuroscience</li>
-              <li>AI Alignment</li>
-            </ul>
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="w-3 h-3 bg-blue-600 rounded-full mt-2"></div>
+              <div class="w-0.5 flex-grow bg-slate-200 dark:bg-slate-700"></div>
+            </div>
+            <div class="pb-6">
+              <h3 class="text-lg font-bold">MSc Artificial Intelligence</h3>
+              <p class="text-slate-600 dark:text-slate-400">University of Groningen &middot; 2024 &ndash; Present</p>
+              <p class="mt-2 text-slate-600 dark:text-slate-400">Current GPA: <strong class="text-slate-900 dark:text-slate-100">8.7/10</strong></p>
+              <p class="text-sm text-slate-500 dark:text-slate-500 mt-1">
+                Focus on AI alignment, mechanistic interpretability, and game theory.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <div class="w-3 h-3 bg-blue-600 rounded-full mt-2"></div>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold">BSc Artificial Intelligence</h3>
+              <p class="text-slate-600 dark:text-slate-400">University of Groningen &middot; Graduated</p>
+              <p class="mt-2 text-slate-600 dark:text-slate-400">GPA: <strong class="text-slate-900 dark:text-slate-100">8.9/10, Cum Laude</strong></p>
+              <p class="text-sm text-slate-500 dark:text-slate-500 mt-1">
+                BSc thesis on transformer-based chemical foundation models, which led to a follow-up <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-d1j8k" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">publication on ChemRxiv</a>.
+              </p>
+            </div>
           </div>
         </div>
+
+        <!-- Research Interests -->
+        <h2 class="text-2xl font-bold mt-10 pt-4 border-t dark:border-slate-700">Research Interests</h2>
         
-        <h2 class="text-2xl font-bold mt-8">My CV</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="border dark:border-slate-700 rounded-lg p-4">
+            <h3 class="font-bold mb-1">Mechanistic Interpretability</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Understanding how neural networks work internally for ensuring control and alignment.</p>
+          </div>
+
+          <div class="border dark:border-slate-700 rounded-lg p-4">
+            <h3 class="font-bold mb-1">Game Theory & AI Safety</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Exploring how game-theoretic ideas can inform AI alignment and multi-agent coordination.</p>
+          </div>
+          <div class="border dark:border-slate-700 rounded-lg p-4">
+            <h3 class="font-bold mb-1">Computational Neuroscience</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Insights from neuroscience for safer, more interpretable AI systems.</p>
+          </div>
+          <div class="border dark:border-slate-700 rounded-lg p-4">
+            <h3 class="font-bold mb-1">AI Governance & Policy</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">EU law compliance of AI systems, governance frameworks, and institutional design.</p>
+          </div>
+          <div class="border dark:border-slate-700 rounded-lg p-4">
+            <h3 class="font-bold mb-1">AI Alignment (broadly)</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Ensuring AI systems remain safe and aligned with human values as they become more powerful.</p>
+          </div>
+        </div>
+
+        <!-- Current Work -->
+        <h2 class="text-2xl font-bold mt-10 pt-4 border-t dark:border-slate-700">What I'm Working On</h2>
+
+        <ul class="space-y-3">
+          <li class="flex gap-3">
+            <span class="text-blue-600 mt-1">&#9679;</span>
+            <span>Exploring <strong>game-theoretic ideas applied to AI safety</strong>. Thinking about coordination problems, incentive structures, and how to get good equilibria and avoid <a href="https://aisig.substack.com/p/mediations-on-moloch-in-the-ai-rat" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Moloch</a>.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-600 mt-1">&#9679;</span>
+            <span>Researching how well and in what contexts <strong>LLMs follow EU legislation</strong>, through the <a href="https://arxiv.org/abs/2510.21524" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">EU-Agent-Bench</a> project.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-600 mt-1">&#9679;</span>
+            <span><strong>Co-directing <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG</a></strong> and pushing for more local AI Safety Initiatives across the Netherlands and a national-level organization.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-blue-600 mt-1">&#9679;</span>
+            <span>Writing on <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">my Substack</a> and <a href="https://aisig.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG's Substack</a> about AI safety, philosophy, books, and more.</span>
+          </li>
+        </ul>
+
+        <!-- CV Download -->
+        <h2 class="text-2xl font-bold mt-10 pt-4 border-t dark:border-slate-700">CV</h2>
         
         <p class="leading-relaxed">
-          For my complete educational background, work experience, and research projects, please check out my CV:
+          For my complete educational background, work experience, and research projects:
         </p>
         
         <div class="mt-4">
           <a 
-            href="/CV_Alexander_Müller_24_08_2025.pdf" 
+            href="/CV_Alexander_Muller_29_12_2025.pdf" 
             target="_blank"
             class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
           >
-            Download CV
+            Download CV (PDF)
           </a>
         </div>
       </div>
       
+      <!-- Sidebar -->
       <div class="md:col-span-1">
-        <div class="sticky top-10">
-          <div class="mb-6 rounded-lg overflow-hidden">
+        <div class="sticky top-10 space-y-6">
+          <div class="rounded-lg overflow-hidden">
             <Image src={linkedinPhoto} alt="Alexander Müller" class="w-full h-auto object-cover" />
           </div>
           
-          <div class="space-y-4">
-            <h3 class="font-semibold text-lg">Location</h3>
-            <p>Groningen, Netherlands</p>
+          <div class="space-y-4 text-sm">
+            <div>
+              <h3 class="font-semibold text-base">Location</h3>
+              <p class="text-slate-600 dark:text-slate-400">Groningen, Netherlands</p>
+            </div>
             
-            <h3 class="font-semibold text-lg pt-2">Education</h3>
-            <p>MSc in Artificial Intelligence</p>
-            <p>University of Groningen</p>
+            <div>
+              <h3 class="font-semibold text-base">Education</h3>
+              <p class="text-slate-600 dark:text-slate-400">MSc Artificial Intelligence</p>
+              <p class="text-slate-600 dark:text-slate-400">University of Groningen</p>
+            </div>
             
-            <h3 class="font-semibold text-lg pt-2">Research Groups</h3>
-            <p>AI Safety Initiative Groningen</p>
+            <div>
+              <h3 class="font-semibold text-base">Roles</h3>
+              <p class="text-slate-600 dark:text-slate-400">Co-Director, AISIG</p>
+              <p class="text-slate-600 dark:text-slate-400">MSc Researcher</p>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-base">Links</h3>
+              <div class="flex flex-col gap-1">
+                <a href="https://scholar.google.com/citations?user=uWrkQLsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Google Scholar</a>
+                <a href="https://github.com/AlexanderAKM" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">GitHub</a>
+                <a href="https://www.linkedin.com/in/alexanderkmüller" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">LinkedIn</a>
+                <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Substack</a>
+                <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG</a>
+              </div>
+            </div>
             
-            <div class="pt-6">
+            <div class="pt-2">
               <a 
                 href="/contact" 
                 class="block w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-center rounded-md transition-colors"

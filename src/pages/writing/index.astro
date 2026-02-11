@@ -14,16 +14,24 @@ const posts = allPosts.sort(
 
 // Extract all tags from posts
 const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort();
+
+// Helper to calculate reading time
+function getReadingTime(body: string): number {
+  const words = body.split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 230));
+}
 ---
 
 <BaseLayout
   title="Writing | Alexander Müller"
-  description="AI Alignment, mechanistic interpretability, and computational neuroscience research insights"
+  description="Thoughts and research on AI alignment, interpretability, game theory, philosophy, and more."
 >
   <div class="py-8">
     <h1 class="text-4xl font-bold mb-4">Writing</h1>
     <p class="text-lg text-slate-600 dark:text-slate-300 mb-8">
-      Thoughts and research on AI Alignment, interpretability, computational neuroscience, and... other stuff. These posts vary greatly in terms of quality, content, depth, and style. They reflect my thoughts at the moment of writing, and do not always reflect my current views. I hope they can be of some value. You can subscribe to my <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">personal Substack</a> and <a href="https://aisig.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG's Substack</a> to get notified about new posts. All of my writing goes on those Substacks, and I will likely fail at keeping this website updated. Although I am associated with <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AI Safety Initiative Groningen (AISIG)</a>, this blog is not affiliated with AISIG, my opinions do not necessarily represent the initiative, and so on. 
+      Thoughts and research on AI alignment, interpretability, computational neuroscience, and other topics. These posts vary in quality, content, depth, and style. They reflect my thinking at the time of writing and do not always reflect my current views. 
+      Subscribe to my <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">personal Substack</a> and <a href="https://aisig.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG's Substack</a> for more regular writing. 
+      Although I am associated with <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG</a>, this blog is not affiliated with AISIG and my opinions do not necessarily represent the initiative.
     </p>
     
     <div id="filter-notice" class="mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hidden">
@@ -34,7 +42,7 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort()
     </div>
     
     <div class="mb-8">
-      <h2 class="text-xl font-semibold mb-3">Topics</h2>
+      <h2 class="text-lg font-semibold mb-3">Topics</h2>
       <div class="flex flex-wrap gap-2">
         <button 
           id="tag-all"
@@ -53,23 +61,27 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort()
       </div>
     </div>
     
-    <div class="space-y-8" id="posts-container">
+    <div class="space-y-6" id="posts-container">
       {posts.map((post) => (
         <div class="post-item border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow" data-tags={JSON.stringify(post.data.tags || [])}>
-          <h2 class="text-2xl font-bold mb-2">
+          <h2 class="text-xl font-bold mb-2">
             <a href={`/writing/${post.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400">{post.data.title}</a>
           </h2>
-          <p class="text-slate-500 dark:text-slate-400 mb-3">
-            {new Date(post.data.pubDate).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric'
-            })}
-            {post.data.draft && <span class="ml-2 px-2 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 text-xs rounded-full">Draft</span>}
-          </p>
+          <div class="flex flex-wrap items-center gap-2 text-sm text-slate-500 dark:text-slate-400 mb-3">
+            <time>
+              {new Date(post.data.pubDate).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </time>
+            <span>&middot;</span>
+            <span>{getReadingTime(post.body)} min read</span>
+            {post.data.draft && <span class="ml-1 px-2 py-0.5 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200 text-xs rounded-full">Draft</span>}
+          </div>
           
           {post.data.tags && post.data.tags.length > 0 && (
-            <div class="flex flex-wrap gap-2 mb-4">
+            <div class="flex flex-wrap gap-2 mb-3">
               {post.data.tags.map(tag => (
                 <span class="text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">
                   {tag}
@@ -78,7 +90,7 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort()
             </div>
           )}
           
-          <a href={`/writing/${post.slug}`} class="text-blue-600 hover:underline">Read more →</a>
+          <a href={`/writing/${post.slug}`} class="text-sm text-blue-600 hover:underline">Read more →</a>
         </div>
       ))}
       
@@ -89,4 +101,4 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort()
   </div>
 
   <script is:inline src="/js/tag-filter.js"></script>
-</BaseLayout> 
+</BaseLayout>

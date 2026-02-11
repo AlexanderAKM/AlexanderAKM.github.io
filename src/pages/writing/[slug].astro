@@ -16,6 +16,10 @@ export async function getStaticPaths() {
 // Get the writing post for this page
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+// Calculate reading time
+const words = entry.body.split(/\s+/).length;
+const readingTime = Math.max(1, Math.ceil(words / 230));
 ---
 
 <BaseLayout
@@ -23,29 +27,41 @@ const { Content } = await entry.render();
   description={entry.data.title}
 >
   <article class="prose prose-slate dark:prose-invert max-w-none">
-    <a href="/writing" class="inline-block mb-6 text-blue-600 hover:underline">← Back to all posts</a>
+    <a href="/writing" class="inline-block mb-6 text-blue-600 hover:underline no-underline">← Back to all posts</a>
     
     <h1 class="text-4xl font-bold mb-2">{entry.data.title}</h1>
-    <p class="text-slate-500 dark:text-slate-400 mb-8">
-      {new Date(entry.data.pubDate).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      })}
+    <div class="flex flex-wrap items-center gap-3 text-slate-500 dark:text-slate-400 mb-8 not-prose">
+      <time>
+        {new Date(entry.data.pubDate).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })}
+      </time>
+      <span>&middot;</span>
+      <span>{readingTime} min read</span>
       {entry.data.tags && entry.data.tags.length > 0 && (
-        <span class="ml-2">
-          {entry.data.tags.map((tag, i) => (
-            <span>
-              <span class="inline-block bg-slate-200 dark:bg-slate-700 rounded-full px-2 py-1 text-xs">
-                {tag}
-              </span>
-              {i < (entry.data.tags?.length || 0) - 1 ? ' ' : ''}
+        <>
+          <span>&middot;</span>
+          {entry.data.tags.map((tag: string) => (
+            <span class="inline-block bg-slate-200 dark:bg-slate-700 rounded-full px-2 py-1 text-xs">
+              {tag}
             </span>
           ))}
-        </span>
+        </>
       )}
-    </p>
+    </div>
     
     <Content />
+
+    <!-- Post footer -->
+    <div class="not-prose mt-12 pt-8 border-t dark:border-slate-700">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <a href="/writing" class="text-blue-600 hover:underline">← Back to all posts</a>
+        <div class="flex gap-3 text-sm">
+          <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-blue-600 dark:text-slate-400 transition-colors">Follow on Substack →</a>
+        </div>
+      </div>
+    </div>
   </article>
-</BaseLayout> 
+</BaseLayout>

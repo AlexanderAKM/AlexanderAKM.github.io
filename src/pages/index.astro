@@ -16,18 +16,23 @@ const latestPosts = posts
 ---
 
 <BaseLayout 
-	title="Alexander Müller | Co-Director AISIG" 
-	description="Personal website of Alexander Müller, Co-Director of AISIG, focusing on ensuring AI goes well."
+	title="Alexander Müller | AI Safety Researcher & Co-Director AISIG" 
+	description="Personal website of Alexander Müller. AI safety researcher, Co-Director of AISIG, MSc student at University of Groningen. Focusing on mechanistic interpretability, game theory, and ensuring AI goes well."
 >
+	<!-- Hero -->
 	<section class="py-12 md:py-20">
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
 			<div class="md:col-span-2">
-				<h1 class="text-4xl md:text-6xl font-bold mb-6">Alexander Müller</h1>
-				<p class="text-xl mb-8 max-w-2xl leading-relaxed">I'm Co-Director of AISIG and student at the University of Groningen, focusing on ensuring AI systems remain safe and aligned with human values.</p>
-				<div class="flex gap-4 flex-wrap">
-					<a href="/about" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md">About me</a>
-					<a href="/CV_Alexander_Muller_29_12_2025.pdf" target="_blank" class="px-5 py-2 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-md">View CV</a>
-					<a href="/contact" class="px-5 py-2 border border-slate-400 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md">Get in touch</a>
+				<h1 class="text-4xl md:text-5xl font-bold mb-4">Alexander Müller</h1>
+				<p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-6 max-w-2xl leading-relaxed">
+					Co-Director of <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG</a> and MSc AI student at the University of Groningen. 
+					I work on ensuring AI systems remain safe and aligned with human values through both AI safety research and through building institutions that take AI safety seriously.
+				</p>
+				<div class="flex gap-3 flex-wrap">
+					<a href="/about" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">About me</a>
+					<a href="/CV_Alexander_Muller_29_12_2025.pdf" target="_blank" class="px-5 py-2.5 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-md transition-colors">View CV</a>
+					<a href="/projects" class="px-5 py-2.5 border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-colors">Research</a>
+					<a href="/contact" class="px-5 py-2.5 border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-md transition-colors">Get in touch</a>
 				</div>
 			</div>
 			<div class="mt-8 md:mt-0">
@@ -40,64 +45,171 @@ const latestPosts = posts
 		</div>
 	</section>
 
-	<section class="py-12">
+	<!-- Current Work -->
+	<section class="py-10">
+		<h2 class="text-2xl md:text-3xl font-bold mb-6">What I'm Currently Working On</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">Game Theory & AI Safety</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Exploring how game-theoretic ideas (coordination problems, incentive structures, equilibrium selection) can inform AI alignment. See our post on <a href="https://aisig.substack.com/p/mediations-on-moloch-in-the-ai-rat" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Moloch</a>.</p>
+			</div>
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">LLMs & EU Legislation</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Researching how well and in what contexts LLM agents follow EU law, through the <a href="https://arxiv.org/abs/2510.21524" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">EU-Agent-Bench</a> project.</p>
+			</div>
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">Growing AI Safety Initiatives</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Co-directing <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG</a> and pushing for more local AI Safety Initiatives across the Netherlands, working towards a national-level organization.</p>
+			</div>
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">Writing & Outreach</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Publishing on <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">my Substack</a> and <a href="https://aisig.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG's Substack</a> about AI safety, philosophy, books, and more.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Research Interests -->
+	<section class="py-10">
 		<h2 class="text-2xl md:text-3xl font-bold mb-6">Research Interests</h2>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<div class="border dark:border-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-				<div class="p-6">
-					<h3 class="text-xl font-bold mb-2">Mechanistic Interpretability</h3>
-					<p class="text-slate-600 dark:text-slate-400 mb-4">Understanding how neural networks work internally is crucial for ensuring control and alignment of increasingly powerful AI systems.</p>
-				</div>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">Mechanistic Interpretability</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Understanding how neural networks work internally, crucial for ensuring control and alignment of increasingly powerful AI systems. See our <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-d1j8k" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">ChemRxiv paper</a>.</p>
 			</div>
-			<div class="border dark:border-slate-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-				<div class="p-6">
-					<h3 class="text-xl font-bold mb-2">Computational Neuroscience</h3>
-					<p class="text-slate-600 dark:text-slate-400 mb-4">Exploring how insights from neuroscience can inform safer and more interpretable AI systems through understanding both biological and artificial neural networks.</p>
-				</div>
+
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">Game Theory & Coordination</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">How game-theoretic frameworks can help us think about multi-agent alignment and cooperation, i.e., how to defeat <a href="https://aisig.substack.com/p/mediations-on-moloch-in-the-ai-rat" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Moloch</a>.</p>
+			</div>
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">Computational Neuroscience</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Bridging biological and artificial neural networks for safer, more interpretable AI.</p>
+			</div>
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">AI Governance & Policy</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">EU law compliance, governance frameworks, and building institutions for AI safety.</p>
+			</div>
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">AI Alignment</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">The broad challenge of ensuring AI systems remain safe and aligned with human values.</p>
 			</div>
 		</div>
 	</section>
 
-	<section class="py-12">
-		<h2 class="text-2xl md:text-3xl font-bold mb-6">Involvement</h2>
-		<div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow mb-6">
-			<h3 class="text-xl font-bold mb-2">AI Safety Initiative Groningen</h3>
+	<!-- AISIG Section -->
+	<section class="py-10">
+		<h2 class="text-2xl md:text-3xl font-bold mb-6">AI Safety Initiative Groningen</h2>
+		<div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
 			<p class="text-slate-600 dark:text-slate-400 mb-4">
-				I co-direct the AI Safety Initiative Groningen (AISIG), where our mission is to raise awareness of the full spectrum of existing and potential harms from AI, inform mitigation priorities through ongoing discourse, and support the realization of effective solutions.
+				I co-direct <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG</a>, an interdisciplinary organization focused on ensuring the interaction of AI with society is just and positive. What we do:
+			</p>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+				<div>
+					<h4 class="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Education</h4>
+					<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1">
+						<li>&#8226; AI Safety, Ethics & Society course: 9+ cohorts, 100+ students</li>
+						<li>&#8226; Governance and Technical tracks</li>
+						<li>&#8226; Discussion groups on Technical AI Alignment and Governance</li>
+					</ul>
+				</div>
+				<div>
+					<h4 class="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Research</h4>
+					<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1">
+						<li>&#8226; Research Hub with 4 experienced supervisors (Dr. to Asst. Prof.)</li>
+						<li>&#8226; Papers at NeurIPS, ICLR, and more</li>
+						<li>&#8226; Regular hackathons with podium placements</li>
+					</ul>
+				</div>
+				<div>
+					<h4 class="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Collaborations</h4>
+					<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1">
+						<li>&#8226; Municipality Westerkwartier: AI governance framework</li>
+						<li>&#8226; Dutch Network for AI Safety</li>
+						<li>&#8226; Helping AISIs starting up again (e.g., AISI Amsterdam) or with collaboration</li>
+					</ul>
+				</div>
+				<div>
+					<h4 class="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Events & Talks</h4>
+					<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1">
+						<li>&#8226; Turn.io, EAGx Amsterdam, AiGrunn</li>
+						<li>&#8226; Samenwerking Noord, TEDx</li>
+						<li>&#8226; Discussion evenings and social events</li>
+					</ul>
+				</div>
+			</div>
+			
+			<p class="text-sm text-slate-500 dark:text-slate-500">
+				Active on <a href="https://www.linkedin.com/company/aisig/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">LinkedIn</a>, 
+				<a href="https://aisig.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Substack</a>,
+				Instagram, LessWrong, and our <a href="https://www.aisig.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">website</a>.
 			</p>
 		</div>
 	</section>
 
+	<!-- Recent Publications -->
+	<section class="py-10">
+		<div class="flex items-center justify-between mb-6">
+			<h2 class="text-2xl md:text-3xl font-bold">Recent Publications</h2>
+			<a href="/projects" class="text-blue-600 hover:underline text-sm">View all →</a>
+		</div>
+		<div class="space-y-4">
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-1">
+					<a href="https://arxiv.org/abs/2510.21524" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400">EU-Agent-Bench: Measuring Illegal Behavior of LLM Agents Under EU Law</a>
+				</h3>
+				<p class="text-sm text-slate-500 dark:text-slate-500">Lichkovski, <strong>Müller</strong>, Ibrahim, Mhundwa &middot; arXiv 2025 &middot; 2 citations</p>
+			</div>
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-1">
+					<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=uWrkQLsAAAAJ&citation_for_view=uWrkQLsAAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400">Uncovering Internal Prediction Mechanisms of Transformer-Based Chemical Foundation Models</a>
+				</h3>
+				<p class="text-sm text-slate-500 dark:text-slate-500"><strong>Müller</strong>, Cardenas-Cartagena, Pollice &middot; ChemRxiv 2025</p>
+			</div>
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-1">
+					<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=uWrkQLsAAAAJ&citation_for_view=uWrkQLsAAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400">From Steering Vectors to Conceptors: Compositional Affine Activation Steering for LLMs</a>
+				</h3>
+				<p class="text-sm text-slate-500 dark:text-slate-500">Abreu, Postmus, <strong>Müller</strong>, et al. &middot; 2025</p>
+			</div>
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-1">
+					<a href="/projects/cbrn-multi-agent-debate.pdf" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">Collective Deliberation for Safer CBRN Decisions: A Multi-Agent LLM Debate Pipeline</a>
+				</h3>
+				<p class="text-sm text-slate-500 dark:text-slate-500"><strong>Müller</strong>, Golicins, Lesnic &middot; AISIG &amp; Apart Research, 2025</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Latest Writing -->
 	{latestPosts.length > 0 && (
-		<section class="py-12">
-			<h2 class="text-2xl md:text-3xl font-bold mb-2">Latest Writing</h2>
+		<section class="py-10">
+			<div class="flex items-center justify-between mb-6">
+				<h2 class="text-2xl md:text-3xl font-bold">Latest Writing</h2>
+				<a href="/writing" class="text-blue-600 hover:underline text-sm">View all →</a>
+			</div>
 			<p class="text-sm text-slate-600 dark:text-slate-400 mb-6">
-				All of my writing currently goes on these two substacks: 
-				<a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"> Alexander’s Substack</a>
-				and
-				<a href="https://aisig.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"> AISIG’s Substack</a>.
+				I write on <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">my Substack</a>
+				and <a href="https://aisig.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISIG's Substack</a> about AI safety, philosophy, books, and more.
 			</p>
-			<div class="space-y-6">
+			<div class="space-y-4">
 				{latestPosts.map(post => (
-					<div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
-						<h3 class="text-xl font-bold mb-2">
+					<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+						<h3 class="font-bold mb-1">
 							<a href={`/writing/${post.slug}`} class="hover:text-blue-600 dark:hover:text-blue-400">
 								{post.data.title}
 							</a>
 						</h3>
-						<p class="text-sm text-slate-500 dark:text-slate-400 mb-3">
+						<p class="text-sm text-slate-500 dark:text-slate-400">
 							{new Date(post.data.pubDate).toLocaleDateString('en-US', {
 								year: 'numeric',
 								month: 'long',
 								day: 'numeric'
 							})}
 						</p>
-						<a href={`/writing/${post.slug}`} class="text-blue-600 hover:underline">Read more →</a>
 					</div>
 				))}
 			</div>
 		</section>
 	)}
 </BaseLayout>
-
-
