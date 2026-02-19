@@ -1,5 +1,8 @@
 # build output
 dist/
+
+# generated CV PDF (compiled from LaTeX in CI)
+public/CV_Alexander_Muller.pdf
 # generated types
 .astro/
 

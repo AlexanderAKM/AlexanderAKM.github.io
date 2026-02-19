@@ -1,7 +1,7 @@
 name: Deploy to GitHub Pages
 on:
   push:
-    branches: [master]     # or master – match your branch
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -14,7 +14,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Compile CV from LaTeX
+        uses: xu-cheng/latex-action@v5
+        with:
+          root_file: CV_Alexander_Muller.tex
+
+      - name: Place compiled PDF in public/
+        run: mv CV_Alexander_Muller.pdf public/CV_Alexander_Muller.pdf
+
       - uses: withastro/action@v3
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
