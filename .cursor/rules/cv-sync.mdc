@@ -1,0 +1,26 @@
+---
+description: Keep the LaTeX CV in sync with website content changes
+alwaysApply: true
+---
+
+# CV Sync Rule
+
+The file `CV_Alexander_Muller.tex` is the LaTeX source for the site owner's CV. It is compiled to PDF automatically in CI and served at `/CV_Alexander_Muller.pdf`.
+
+## When editing website content
+
+Whenever content is added or changed on the website (Astro pages, projects, publications, talks, about page, etc.), check whether the change is also relevant to the CV. Common cases:
+
+- **New publication** → add to the numbered Publications list in the `.tex` and update any cross-references `[N]` throughout the document.
+- **New talk or event** → add to the Talks section.
+- **New project** → consider adding to Selected Projects.
+- **Updated role, GPA, course list, or bio** → update the corresponding section (Profile, Education, Working Experience).
+- **New collaboration, partnership, or award** → update Working Experience or add a new section entry.
+
+## How to handle it
+
+1. Read `CV_Alexander_Muller.tex` to understand the current state.
+2. Make the relevant edits to keep the CV consistent with the website change.
+3. Let the user know what you changed in the CV and why, so they can verify.
+
+If the website change is clearly not CV-relevant (e.g., styling, layout, dependency updates), no CV edit is needed — don't mention it.

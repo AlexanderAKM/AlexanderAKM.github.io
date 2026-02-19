@@ -3,6 +3,15 @@ dist/
 
 # generated CV PDF (compiled from LaTeX in CI)
 public/CV_Alexander_Muller.pdf
+
+# local LaTeX build artifacts
+build/
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
 # generated types
 .astro/
 
