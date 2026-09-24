@@ -34,3 +34,10 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# CV PDF is compiled fresh in CI; never commit it
+CV_Alexander_Muller.pdf
+*.synctex.gz
+
+# raw coursework PDFs (kept locally, not published)
+projects/

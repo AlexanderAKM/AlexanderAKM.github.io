@@ -16,8 +16,8 @@ const latestPosts = posts
 ---
 
 <BaseLayout 
-	title="Alexander Müller | AI Safety Researcher & Director of Safe AI Netherlands" 
-	description="Personal website of Alexander Müller. AI safety researcher, Director of Safe AI Netherlands (SAIN), MSc student at University of Groningen. Focusing on mechanistic interpretability, game theory, and ensuring AI goes well."
+	title="Alexander Müller | Director of Safe AI Netherlands" 
+	description="Personal website of Alexander Müller. Director of Safe AI Netherlands (SAIN) and co-founder of the AI Safety Hub Amsterdam, focused on preparing the Netherlands for the risks of transformative AI. Previously researched multi-agent game theory, LLM agent evaluations, and mechanistic interpretability."
 >
 	<!-- Hero -->
 	<section class="py-12 md:py-20">
@@ -25,8 +25,8 @@ const latestPosts = posts
 			<div class="md:col-span-2">
 				<h1 class="text-4xl md:text-5xl font-bold mb-4">Alexander Müller</h1>
 				<p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-6 max-w-2xl leading-relaxed">
-					Director of <a href="https://safeainetherlands.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Safe AI Netherlands (SAIN)</a>, the national AI safety organization with chapters in <a href="https://safeainetherlands.org/chapters/groningen" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Groningen</a>, Utrecht, and Amsterdam. I'm also an MSc AI student at the University of Groningen.
-					I work on making sure AI goes well, through technical research and by growing organizations that take AI safety seriously.
+					Director of <a href="https://safeainetherlands.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Safe AI Netherlands (SAIN)</a>, the national AI safety field-building organization with chapters in Groningen, Utrecht, and Amsterdam. Currently co-founding the AI Safety Hub Amsterdam at The Stack.
+					I'm generally interested in making sure AI goes well, for now focusing on preparing the Netherlands for the risks of transformative AI.
 				</p>
 				<div class="flex gap-3 flex-wrap">
 					<a href="/about" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">About me</a>
@@ -50,21 +50,21 @@ const latestPosts = posts
 		<h2 class="text-2xl md:text-3xl font-bold mb-6">What I'm Currently Working On</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
-				<h3 class="font-bold mb-2">Game Theory & AI Safety</h3>
-				<p class="text-sm text-slate-600 dark:text-slate-400">Exploring how game-theoretic ideas (coordination problems, incentive structures, equilibrium selection) can inform AI alignment. See my post on <a href="https://safeainetherlands.substack.com/p/mediations-on-moloch-in-the-ai-rat" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Moloch</a>.</p>
+				<h3 class="font-bold mb-2">Scaling Safe AI Netherlands</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Directing <a href="https://safeainetherlands.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"><strong>Safe AI Netherlands (SAIN)</strong></a>, funded with a $2M two-year grant. Built a team of 4 full-time staff (including me), 10 part-timers, and 30 volunteers, and expanding from Groningen, Utrecht, and Amsterdam to Eindhoven, Delft, and The Hague.</p>
 			</div>
 			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
-				<h3 class="font-bold mb-2">LLMs & EU Legislation</h3>
-				<p class="text-sm text-slate-600 dark:text-slate-400">Researching how well and in what contexts LLM agents follow EU law, through the <a href="https://arxiv.org/abs/2510.21524" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">EU-Agent-Bench</a> project.</p>
+				<h3 class="font-bold mb-2">AI Safety Hub Amsterdam</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Co-founding and co-directing a dedicated AI safety hub at The Stack: a new place for researchers, professionals, and organizations working on AI safety in the Netherlands.</p>
 			</div>
-			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
-				<h3 class="font-bold mb-2">Growing AI Safety Initiatives</h3>
-				<p class="text-sm text-slate-600 dark:text-slate-400">Directing <a href="https://safeainetherlands.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"><strong>Safe AI Netherlands (SAIN)</strong></a>, the national AI safety organization with chapters in <a href="https://safeainetherlands.org/chapters/groningen" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Groningen</a>, Utrecht, and Amsterdam, and pushing for stronger AI safety presence across the country.</p>
+			<!-- <div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">Multi-Agent Game Theory</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Studying when AI agents can reach cooperation in social dilemmas if their strategies can condition on each other's parameters. See <a href="https://arxiv.org/abs/2606.27068" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Parametric Open Source Games</a> and my post on <a href="https://safeainetherlands.substack.com/p/mediations-on-moloch-in-the-ai-rat" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Moloch</a>.</p>
 			</div>
 			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
 				<h3 class="font-bold mb-2">Writing & Outreach</h3>
 				<p class="text-sm text-slate-600 dark:text-slate-400">Publishing on <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">my Substack</a> and <a href="https://safeainetherlands.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">SAIN's Substack</a> about AI safety, philosophy, books, and more.</p>
-			</div>
+			</div> -->
 		</div>
 	</section>
 
@@ -72,26 +72,26 @@ const latestPosts = posts
 	<section class="py-10">
 		<h2 class="text-2xl md:text-3xl font-bold mb-6">Research Interests</h2>
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+			<!-- <div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
 				<h3 class="font-bold mb-2">Mechanistic Interpretability</h3>
 				<p class="text-sm text-slate-600 dark:text-slate-400">Understanding how neural networks work internally. If we can't look inside these systems and understand what they're doing, we can't trust them. See <a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-d1j8k" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">this paper</a>.</p>
-			</div>
+			</div> -->
 
 			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
-				<h3 class="font-bold mb-2">Game Theory & Coordination</h3>
-				<p class="text-sm text-slate-600 dark:text-slate-400">How game-theoretic frameworks can help us think about multi-agent alignment and cooperation, i.e., how to defeat <a href="https://safeainetherlands.substack.com/p/mediations-on-moloch-in-the-ai-rat" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Moloch</a>.</p>
+				<h3 class="font-bold mb-2">Multi-Agent Game Theory</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">How game-theoretic frameworks can help us think about multi-agent alignment and cooperation, i.e., how to defeat <a href="https://safeainetherlands.substack.com/p/mediations-on-moloch-in-the-ai-rat" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Moloch</a>. See <a href="https://arxiv.org/abs/2606.27068" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">this paper</a>.</p>
 			</div>
 			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
-				<h3 class="font-bold mb-2">Computational Neuroscience</h3>
-				<p class="text-sm text-slate-600 dark:text-slate-400">What can biological neural networks teach us about artificial ones, and vice versa?</p>
+				<h3 class="font-bold mb-2">LLM Agent Evaluations</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Measuring how LLM agents behave when deployed in realistic settings, including whether they break the law. See <a href="https://arxiv.org/abs/2510.21524" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">this paper</a>.</p>
 			</div>
-			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
-				<h3 class="font-bold mb-2">AI Governance & Policy</h3>
-				<p class="text-sm text-slate-600 dark:text-slate-400">EU law compliance, governance frameworks, and growing organizations that take AI safety seriously. See <a href="https://arxiv.org/abs/2510.21524" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">this paper</a>.</p>
-			</div>
+			<!-- <div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-2">AI Governance & Field-Building</h3>
+				<p class="text-sm text-slate-600 dark:text-slate-400">Governance frameworks, EU law compliance, and growing organizations that take AI safety seriously.</p>
+			</div> -->
 			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
 				<h3 class="font-bold mb-2">AI Alignment</h3>
-				<p class="text-sm text-slate-600 dark:text-slate-400">How do we make sure AI systems actually do what we want? The problem is harder than it sounds. See <a href="https://safeainetherlands.substack.com/p/why-smarter-doesnt-mean-kinder-orthogonality" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">this post</a>.</p>
+				<p class="text-sm text-slate-600 dark:text-slate-400">How do we make sure AI systems actually do what we want? The problem is harder than it sounds. See e.g., <a href="https://safeainetherlands.substack.com/p/why-smarter-doesnt-mean-kinder-orthogonality" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">this post</a>.</p>
 			</div>
 		</div>
 	</section>
@@ -101,14 +101,14 @@ const latestPosts = posts
 		<h2 class="text-2xl md:text-3xl font-bold mb-6">Safe AI Netherlands (SAIN)</h2>
 		<div class="border dark:border-slate-700 rounded-lg p-6 hover:shadow-md transition-shadow">
 			<p class="text-slate-600 dark:text-slate-400 mb-4">
-				I direct <a href="https://safeainetherlands.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"><strong>Safe AI Netherlands (SAIN)</strong></a>, the national interdisciplinary organization focused on ensuring the interaction of AI with society is just and positive. SAIN spans chapters in <a href="https://safeainetherlands.org/chapters/groningen" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Groningen</a> (the founding chapter), Utrecht, and Amsterdam. What we do:
+				I direct <a href="https://safeainetherlands.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline"><strong>Safe AI Netherlands (SAIN)</strong></a>, the Dutch field-building organization focused on preparing the Netherlands for the risks of transformative AI. SAIN has chapters in Groningen, Utrecht, and Amsterdam, with Eindhoven, Delft, and The Hague coming soon. In 2026, we received a $2M two-year grant; we now run on a team of 4 full-time staff (including me), 10 part-timers, and 30 volunteers. What we do:
 			</p>
 			
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
 				<div>
 					<h4 class="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Education</h4>
 					<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1">
-						<li>&#8226; AI Safety, Ethics & Society course: 9+ cohorts, 100+ students</li>
+						<li>&#8226; Educating hundreds of people through our AI Safety, Ethics & Society course</li>
 						<li>&#8226; Governance and Technical tracks</li>
 						<li>&#8226; Discussion groups on Technical AI Alignment and Governance</li>
 					</ul>
@@ -116,24 +116,24 @@ const latestPosts = posts
 				<div>
 					<h4 class="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Research</h4>
 					<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1">
-						<li>&#8226; Research Hub with 4 experienced supervisors (Dr. to Asst. Prof.)</li>
-						<li>&#8226; Papers at NeurIPS, ICLR, and more</li>
+						<li>&#8226; Project Hub with 6 experienced supervisors and ~15 researchers</li>
+						<li>&#8226; Papers at NeurIPS and ICLR workshops, and more</li>
 						<li>&#8226; Regular hackathons with podium placements</li>
 					</ul>
 				</div>
 				<div>
-					<h4 class="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Collaborations</h4>
+					<h4 class="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Growth & Collaborations</h4>
 					<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1">
-						<li>&#8226; Municipality Westerkwartier: AI governance framework</li>
-						<li>&#8226; Dutch Network for AI Safety</li>
-						<li>&#8226; Coordinating SAIN chapters in Utrecht and Amsterdam (incl. <a href="https://aisafetyamsterdam.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AISI Amsterdam</a>)</li>
+						<!-- <li>&#8226; Municipality Westerkwartier: AI governance framework</li> -->
+						<li>&#8226; Co-founding the AI Safety Hub Amsterdam at The Stack</li>
+						<li>&#8226; New chapters in Eindhoven, Delft, and The Hague</li>
 					</ul>
 				</div>
 				<div>
 					<h4 class="font-bold text-sm uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-2">Events & Talks</h4>
 					<ul class="text-sm text-slate-600 dark:text-slate-400 space-y-1">
-						<li>&#8226; <a href="https://www.linkedin.com/feed/update/urn:li:activity:7363914334478995457" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Turn.io</a>, <a href="https://forum.effectivealtruism.org/posts/fAMAiso5DhRSAhiQD/the-lineup-for-eagxamsterdam-2025-is-here-apply-by-december#How_to_Run_an_AI_Safety_Initiative___Alexander_M_ller__AISIG____Andres_Jimenez_Nanhekhan__DNAIS_" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">EAGx Amsterdam</a>, <a href="https://www.linkedin.com/feed/update/urn:li:activity:7406332509011091457" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">AiGrunn</a></li>
-						<li>&#8226; <a href="https://www.linkedin.com/posts/samenwerkingnoord_alexander-m%C3%BCller-van-ai-safety-initiative-activity-7426993119344095232-zZSG" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Samenwerking Noord</a>, <a href="https://www.tedxbroerstraat.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">TEDx</a></li>
+						<li>&#8226; <a href="https://www.linkedin.com/feed/update/urn:li:activity:7363914334478995457" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Turn.io</a>, <a href="https://forum.effectivealtruism.org/posts/fAMAiso5DhRSAhiQD/the-lineup-for-eagxamsterdam-2025-is-here-apply-by-december#How_to_Run_an_AI_Safety_Initiative___Alexander_M_ller__AISIG____Andres_Jimenez_Nanhekhan__DNAIS_" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">EAGx Amsterdam</a>, <a href="https://www.linkedin.com/feed/update/urn:li:activity:7406332509011091457" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">aiGrunn</a></li>
+						<li>&#8226; <a href="https://www.linkedin.com/posts/samenwerkingnoord_alexander-m%C3%BCller-van-ai-safety-initiative-activity-7426993119344095232-zZSG" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Samenwerking Noord</a></li>
 						<li>&#8226; Discussion evenings and social events</li>
 					</ul>
 				</div>
@@ -142,7 +142,7 @@ const latestPosts = posts
 			<p class="text-sm text-slate-500 dark:text-slate-500">
 				Active on <a href="https://www.linkedin.com/company/safe-ai-netherlands/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">LinkedIn</a>, 
 				<a href="https://safeainetherlands.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Substack</a>,
-				<a href="https://www.instagram.com/aisafetygroningen/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Instagram</a>, <a href="https://www.lesswrong.com/s/GrDsm83KCkEAy9L8e" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">LessWrong</a>, and our <a href="https://safeainetherlands.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">website</a>.
+				<a href="https://www.instagram.com/sainetherlands/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Instagram</a>, and our <a href="https://safeainetherlands.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">website</a>.
 			</p>
 		</div>
 	</section>
@@ -150,10 +150,16 @@ const latestPosts = posts
 	<!-- Recent Publications -->
 	<section class="py-10">
 		<div class="flex items-center justify-between mb-6">
-			<h2 class="text-2xl md:text-3xl font-bold">Recent Publications</h2>
+			<h2 class="text-2xl md:text-3xl font-bold">Publications</h2>
 			<a href="/projects" class="text-blue-600 hover:underline text-sm">View all →</a>
 		</div>
 		<div class="space-y-4">
+			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
+				<h3 class="font-bold mb-1">
+					<a href="https://arxiv.org/abs/2606.27068" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400">Parametric Open Source Games</a>
+				</h3>
+				<p class="text-sm text-slate-500 dark:text-slate-500">Todorov, Napel, <strong>Müller</strong> &middot; arXiv 2026</p>
+			</div>
 			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
 				<h3 class="font-bold mb-1">
 					<a href="https://arxiv.org/abs/2510.21524" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400">EU-Agent-Bench: Measuring Illegal Behavior of LLM Agents Under EU Law</a>
@@ -162,7 +168,7 @@ const latestPosts = posts
 			</div>
 			<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
 				<h3 class="font-bold mb-1">
-					<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=uWrkQLsAAAAJ&citation_for_view=uWrkQLsAAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400">Uncovering Internal Prediction Mechanisms of Transformer-Based Chemical Foundation Models</a>
+					<a href="https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-d1j8k" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400">Uncovering Internal Prediction Mechanisms of Transformer-Based Chemical Foundation Models</a>
 				</h3>
 				<p class="text-sm text-slate-500 dark:text-slate-500"><strong>Müller</strong>, Cardenas-Cartagena, Pollice &middot; ChemRxiv 2025</p>
 			</div>
@@ -185,13 +191,17 @@ const latestPosts = posts
 	{latestPosts.length > 0 && (
 		<section class="py-10">
 			<div class="flex items-center justify-between mb-6">
-				<h2 class="text-2xl md:text-3xl font-bold">Latest Writing</h2>
+				<h2 class="text-2xl md:text-3xl font-bold">Writing</h2>
 				<a href="/writing" class="text-blue-600 hover:underline text-sm">View all →</a>
 			</div>
-			<p class="text-sm text-slate-600 dark:text-slate-400 mb-6">
-				I write on <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">my Substack</a>
-				and <a href="https://safeainetherlands.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">SAIN's Substack</a> about AI safety, philosophy, books, and more. Although there are some posts on this website, I don't keep them updated, so please check out the Substacks!
+			<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+				All my current writing lives on Substack: <a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">my personal Substack</a> (books, philosophy, game theory, and more)
+				and <a href="https://safeainetherlands.substack.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">SAIN's Substack</a> (AI safety). The posts below are an older archive that I no longer update so really check out my personal Substack (though I've been quite inactive there as well, oops).
 			</p>
+			<div class="flex gap-3 flex-wrap mb-6">
+				<a href="https://alexandermullerakm.substack.com/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">My Substack</a>
+				<a href="https://safeainetherlands.substack.com/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 text-sm border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/30 rounded-md transition-colors">SAIN's Substack</a>
+			</div>
 			<div class="space-y-4">
 				{latestPosts.map(post => (
 					<div class="border dark:border-slate-700 rounded-lg p-5 hover:shadow-md transition-shadow">
